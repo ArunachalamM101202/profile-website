@@ -272,6 +272,18 @@
             margin-left: -1.5px;
         }
 
+        .linkedin-btn {
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .linkedin-btn:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
         .timeline-item {
             padding: 20px 40px;
             position: relative;
@@ -375,13 +387,30 @@
             gap: 30px;
         }
 
+        .project-badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--highlight-color);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .project-subheading {
+            font-size: 0.9rem;
+            color: var(--highlight-color);
+            margin: 10px 0 20px;
+            line-height: 1.4;
+        }
+
         .project-card {
-            background-color: var(--card-color);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            position: relative;
+            perspective: 1500px;
+            background: none;
+            box-shadow: none;
+            height: 440px;
         }
 
         .project-card:hover {
@@ -389,8 +418,58 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
+        .github-btn {
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .github-btn:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
         .project-content {
             padding: 25px;
+        }
+
+        .flip-card {
+            perspective: 1500px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            background-color: var(--card-color);
+            padding: 25px;
+        }
+
+        .flip-card-front {
+            z-index: 2;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+
         }
 
         .project-title {
@@ -431,6 +510,26 @@
         .project-links {
             display: flex;
             gap: 15px;
+        }
+
+        .flip-toggle-icon {
+            display: none;
+            /* hidden by default */
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 1.2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            z-index: 10;
+        }
+
+        .flip-toggle-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .project-btn {
@@ -711,6 +810,29 @@
                 text-align: center;
             }
 
+            .project-badge {
+                display: inline-block;
+                background-color: rgba(255, 255, 255, 0.05);
+                color: var(--highlight-color);
+                font-size: 0.75rem;
+                font-weight: 600;
+                padding: 4px 10px;
+                border-radius: 20px;
+                margin-bottom: 10px;
+                letter-spacing: 0.5px;
+            }
+
+            .project-subheading {
+                font-size: 0.9rem;
+                color: var(--highlight-color);
+                margin: 10px 0 20px;
+                line-height: 1.4;
+            }
+
+            .flip-toggle-icon {
+                display: block;
+            }
+
             .hero-text {
                 order: 2;
                 margin-top: 40px;
@@ -850,7 +972,11 @@
                 margin-bottom: 10px;
             }
         }
-
+        .github-btn:hover,
+.linkedin-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
         /* 769px and above - desktop */
         @media (min-width: 769px) {
 
@@ -913,9 +1039,13 @@
                     <div class="hero-buttons">
                         <a href="https://drive.google.com/file/d/1roFxUip8e99yfMznl-hOoGPmpTdhqSy1/view?usp=sharing"
                             class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
-                        <a href="https://www.linkedin.com/in/arunachalam-manikandan/" target="_blank"
-                            class="btn btn-secondary">
+                        <a href="https://linkedin.com/in/yourprofile" class="btn btn-outline linkedin-btn"
+                            target="_blank">
                             <i class="fab fa-linkedin-in"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/ArunachalamM101202" class="btn btn-outline github-btn"
+                            target="_blank">
+                            <i class="fab fa-github"></i> GitHub
                         </a>
                     </div>
                 </div>
@@ -1205,24 +1335,30 @@
                         </div>
                         <span class="date">Jun. 2023 – Aug. 2023</span>
                         <ul>
-                            <li>Designed and deployed an AI-powered chatbot to streamline the U.S. visa application process, enabling users to schedule interviews, understand eligibility steps, and receive instant answers to visa-related queries.</li>
-                            <li>Implemented natural language understanding using Microsoft LUIS and integrated conversational flows with Microsoft Azure, QnA Maker, and a custom knowledge base to enhance response accuracy and user engagement.</li>
-                            <li>Gained hands-on experience in conversational AI development using enterprise-grade tools, improving accessibility and efficiency for users navigating complex bureaucratic processes.</li>
+                            <li>Designed and deployed an AI-powered chatbot to streamline the U.S. visa application
+                                process, enabling users to schedule interviews, understand eligibility steps, and
+                                receive instant answers to visa-related queries.</li>
+                            <li>Implemented natural language understanding using Microsoft LUIS and integrated
+                                conversational flows with Microsoft Azure, QnA Maker, and a custom knowledge base to
+                                enhance response accuracy and user engagement.</li>
+                            <li>Gained hands-on experience in conversational AI development using enterprise-grade
+                                tools, improving accessibility and efficiency for users navigating complex bureaucratic
+                                processes.</li>
                         </ul>
 
                         <h5 class="subheading">Technologies Used</h5>
-<div class="skills-container">
-    <div class="skill-tag">Microsoft Azure</div>
-    <div class="skill-tag">LUIS (Language Understanding)</div>
-    <div class="skill-tag">QnA Maker</div>
-    <div class="skill-tag">Conversational AI</div>
-    <div class="skill-tag">Chatbot Design</div>
-    <div class="skill-tag">Natural Language Processing</div>
-    <div class="skill-tag">Knowledge Base</div>
-    <div class="skill-tag">Dialog Flow Design</div>
-    <div class="skill-tag">Azure Bot Services</div>
-    <div class="skill-tag">User Experience (UX)</div>
-</div>
+                        <div class="skills-container">
+                            <div class="skill-tag">Microsoft Azure</div>
+                            <div class="skill-tag">LUIS (Language Understanding)</div>
+                            <div class="skill-tag">QnA Maker</div>
+                            <div class="skill-tag">Conversational AI</div>
+                            <div class="skill-tag">Chatbot Design</div>
+                            <div class="skill-tag">Natural Language Processing</div>
+                            <div class="skill-tag">Knowledge Base</div>
+                            <div class="skill-tag">Dialog Flow Design</div>
+                            <div class="skill-tag">Azure Bot Services</div>
+                            <div class="skill-tag">User Experience (UX)</div>
+                        </div>
                     </div>
                 </div>
 
@@ -1235,70 +1371,66 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-container">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">MinneDigest: AI-Powered News Digest and Podcast generator</h3>
-                        <p class="project-description">Engineered an AI-driven News platform in 8 hours that aggregates
-                            personalized news and generates AI-powered podcasts with multi-language support, achieving
-                            an 85% faster generation of daily podcasts. Secured a $10,000 grant from the University of
-                            Minnesota and will be partnering with local Minnesota news outlets such as MPR and MinnPost
-                            to scale the platform and enhance its user engagement and performance.</p>
-                        <div class="project-stack">
-                            <span class="stack-item">Python</span>
-                            <span class="stack-item">Streamlit</span>
-                            <span class="stack-item">NLTK</span>
-                            <span class="stack-item">ChatGPT</span>
+
+                <!-- Single Project Flip Card -->
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+
+                        <!-- Front Face -->
+                        <div class="flip-card-front">
+                            <div class="project-content">
+
+                                <!-- 🏷️ Badge -->
+                                <span class="project-badge">🏆 Hackathon Winner</span>
+
+                                <!-- 🧠 Title -->
+                                <h3 class="project-title">MinneDigest: AI-Powered News Digest</h3>
+
+                                <!-- 📝 Subheading -->
+                                <p class="project-subheading">
+                                    LLM-powered platform that transforms real-time news into multilingual podcasts in
+                                    seconds.
+                                </p>
+
+                                <!-- 💻 Stack Tags -->
+                                <div class="project-stack">
+                                    <span class="stack-item">Python</span>
+                                    <span class="stack-item">Streamlit</span>
+                                    <span class="stack-item">NLTK</span>
+                                    <span class="stack-item">ChatGPT</span>
+                                </div>
+
+                                <!-- 🔗 Links -->
+                                <div class="project-links">
+                                    <a href="#" class="project-btn github-btn"><i class="fab fa-github"></i> GitHub</a>
+                                    <a href="#" class="project-btn youtube-btn"><i class="fab fa-youtube"></i> Demo</a>
+                                </div>
+
+                                <!-- 🔁 Flip Icon for Mobile -->
+                                <div class="flip-toggle-icon"
+                                    onclick="this.closest('.flip-card').classList.toggle('flipped')">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-btn github-btn"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-btn youtube-btn"><i class="fab fa-youtube"></i> Demo</a>
+
+                        <!-- Back Face -->
+                        <div class="flip-card-back">
+                            <div class="project-content">
+                                <p>Built in 8 hours during a university hackathon, MinneDigest automates multilingual
+                                    podcast generation from real-time news. Secured a $10,000 grant and partnerships
+                                    with MPR and MinnPost to scale platform usage.</p>
+                                <ul>
+                                    <li>85% faster podcast generation pipeline</li>
+                                    <li>Real-time news summarization and translation via LLMs</li>
+                                    <li>Multi-language support with text-to-speech integration</li>
+                                </ul>
+                            </div>
                         </div>
+
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Streamlining Architectural Workflows and Interior Design using
-                            Generative AI</h3>
-                        <p class="project-description">Created an AI solution automating user input into architectural
-                            designs, cutting manual design time by 40% and ensuring compliance with regulatory
-                            frameworks. Compared generated house layouts with LLMs like ChatGPT-3.5 and Llama3,
-                            showcasing superior spatial layouts. Devised an innovative AI framework that enhanced design
-                            exploration efficiency by 30%, allowing clients to visualize interior modifications
-                            instantly through advanced techniques like Neural Style Transfer and CycleGANs.</p>
-                        <div class="project-stack">
-                            <span class="stack-item">Python</span>
-                            <span class="stack-item">PyTorch</span>
-                            <span class="stack-item">TensorFlow</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-btn github-btn"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-btn youtube-btn"><i class="fab fa-youtube"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">HealthWagon (Developed in 24 Hours during K!Hacks Hackathon)</h3>
-                        <p class="project-description">Developed a mobile application with a custom fall detection
-                            algorithm with 90% accuracy that alerts hospitals and emergency contacts upon fall
-                            detection, and an ambulance personnel app for accessing and updating patient health records
-                            via QR code, enhancing emergency response efficiency. Established a distributed electronic
-                            health record (EHR) system using REST API, providing secure access to patient data for
-                            doctors, EMTs, and patients.</p>
-                        <div class="project-stack">
-                            <span class="stack-item">React Native</span>
-                            <span class="stack-item">Flask</span>
-                            <span class="stack-item">MongoDB</span>
-                            <span class="stack-item">spaCy</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-btn github-btn"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-btn youtube-btn"><i class="fab fa-youtube"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
