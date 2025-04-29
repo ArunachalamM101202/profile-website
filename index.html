@@ -404,13 +404,14 @@
             color: var(--highlight-color);
             margin: 10px 0 20px;
             line-height: 1.4;
+            text-align: justify;
         }
 
         .project-card {
             perspective: 1500px;
             background: none;
             box-shadow: none;
-            height: 440px;
+            height: 540px;
         }
 
         .project-card:hover {
@@ -431,7 +432,7 @@
         }
 
         .project-content {
-            padding: 25px;
+            padding: 20px;
         }
 
         .flip-card {
@@ -442,12 +443,28 @@
             position: relative;
             width: 100%;
             height: 100%;
-            transition: transform 0.6s;
+            transition: transform 1s;
             transform-style: preserve-3d;
         }
 
         .flip-card:hover .flip-card-inner {
+            transition-delay: 1s;
             transform: rotateY(180deg);
+        }
+
+        .flip-card-back .project-content {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .flip-card-back .project-content ul {
+            padding: 15px;
+        }
+
+        .flip-card-back .project-content ul li {
+            list-style-type: number;
+            margin-bottom: 15px;
         }
 
         .flip-card-front,
@@ -489,6 +506,7 @@
             margin-top: 20px;
             font-size: 1.1rem;
             font-weight: 600;
+            margin-bottom: 30px;
             color: var(--highlight-color);
         }
 
@@ -566,7 +584,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            margin-top: 20px;
+            margin-bottom: 30px;
         }
 
         .skill-tag {
@@ -972,11 +990,13 @@
                 margin-bottom: 10px;
             }
         }
+
         .github-btn:hover,
-.linkedin-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
+        .linkedin-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
         /* 769px and above - desktop */
         @media (min-width: 769px) {
 
@@ -1393,11 +1413,15 @@
                                 </p>
 
                                 <!-- 💻 Stack Tags -->
-                                <div class="project-stack">
-                                    <span class="stack-item">Python</span>
-                                    <span class="stack-item">Streamlit</span>
-                                    <span class="stack-item">NLTK</span>
-                                    <span class="stack-item">ChatGPT</span>
+                                <h5 class="subheading">Technologies Used</h5>
+                                <div class="skills-container">
+                                    <div class="stack-item">Python</div>
+                                    <div class="stack-item">Streamlit</div>
+                                    <div class="stack-item">Flask</div>
+                                    <div class="stack-item">LLMs (ChatGPT, Gemini)</div>
+                                    <div class="stack-item">REST API</div>
+                                    <div class="stack-item">MongoDB</div>
+
                                 </div>
 
                                 <!-- 🔗 Links -->
@@ -1417,13 +1441,18 @@
                         <!-- Back Face -->
                         <div class="flip-card-back">
                             <div class="project-content">
-                                <p>Built in 8 hours during a university hackathon, MinneDigest automates multilingual
-                                    podcast generation from real-time news. Secured a $10,000 grant and partnerships
-                                    with MPR and MinnPost to scale platform usage.</p>
                                 <ul>
-                                    <li>85% faster podcast generation pipeline</li>
-                                    <li>Real-time news summarization and translation via LLMs</li>
-                                    <li>Multi-language support with text-to-speech integration</li>
+                                    <li>Built <strong>MinneDigest</strong>, an AI-powered news-to-audio platform in
+                                        under 24 hours, delivering personalized real-time news through multilingual
+                                        summaries and podcast-style audio.</li>
+
+                                    <li>Secured a <strong>$10,000 grant</strong> from Hacks/Hackers and the University
+                                        of Minnesota to scale the platform and partner with outlets like MPR and
+                                        MinnPost.</li>
+
+                                    <li>Designed a full-stack pipeline with LLM-based summarization, real-time
+                                        translation, and sentiment-aware text-to-speech, featuring a dual-persona
+                                        podcast system and responsive web UI.</li>
                                 </ul>
                             </div>
                         </div>
@@ -1608,6 +1637,12 @@
                 }
             </style>
         `);
+
+        document.querySelectorAll('.project-links a').forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.stopPropagation(); // Prevent flip on click
+            });
+        });
 
         // GPA bar fill animation
         // GPA bar fill animation
