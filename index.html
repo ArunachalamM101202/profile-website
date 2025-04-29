@@ -134,7 +134,7 @@
             max-width: 600px;
         }
 
-        .hero-name {
+        /* .hero-name {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 10px;
@@ -144,7 +144,27 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-        }
+        } */
+
+        .hero-name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    background: linear-gradient(90deg, #b16cea, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 200% auto;
+    animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+}
 
         .hero-title {
             font-size: 1.2rem;
@@ -465,6 +485,47 @@
         .flip-card-back .project-content ul li {
             list-style-type: number;
             margin-bottom: 15px;
+        }
+
+        .about-highlight {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    background: linear-gradient(270deg, #ffffff, #0071e3, #2997ff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s ease infinite;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Keyframes for shifting gradient */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.about-highlight:hover {
+    background-position: right center;
+}
+
+        .about-subheading {
+            font-size: 1.1rem;
+            color: var(--highlight-color);
+            font-weight: 600;
+            margin: 40px 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 12px;
         }
 
         .flip-card-front,
@@ -1080,27 +1141,47 @@
     <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p> Hi, I’m a Computer Science graduate student at the University of Minnesota, Twin Cities, with a
-                    focus on AI, Machine Learning, Natural Language Processing, and Advanced Software Engineering.
-                    Beyond coursework, I work as a Graduate Research Assistant in the Epidemiology department, where I
-                    help model HPV-related cancer outcomes. I also serve as a Teaching Assistant at the Carlson School
-                    of Management, guiding students through hands-on projects in Big Data, Spark, and AWS. </p>
 
-                <p>Right now, I’m building something I’m really excited about — an AI-powered game at the AI Innovation
-                    Lab at Supercell. It blends real-time reasoning and world simulation to rethink how gameplay can
-                    feel truly dynamic and intelligent. It’s a space where my passion for AI and storytelling really
-                    comes alive.</p>
+            <!-- 1-Line Summary -->
+            <p class="about-highlight">
+                " <strong>I design and deploy scalable LLM architectures, RAG pipelines, and agentic frameworks</strong> that make cutting-edge AI <strong>usable, responsive, and production-ready</strong>.<br>
+                I also work across the stack — building <strong>robust APIs</strong>, <strong>backend systems</strong>, and occasionally <strong>web or mobile interfaces</strong>, with a strong foundation in <strong>machine learning</strong> and real-world deployment." 
+              </p>
 
-                <p>Previously, I interned at Visa, where I worked on large-scale data pipelines in Apache Spark and
-                    Scala, tackling real-world data quality and infrastructure challenges. Before grad school, I
-                    completed my Bachelor’s in Information Technology at the College of Engineering, Guindy, diving deep
-                    into topics ranging from AI to OS, databases, and networks.</p>
+            <!-- Subsection: Education & Research -->
+            <h4 class="about-subheading">Education & Research</h4>
+            <p>
+                I'm a Computer Science graduate student at the <strong>University of Minnesota, Twin Cities</strong>,
+                focused on AI, Machine Learning, NLP, and Advanced Software Engineering.
+                I serve as a <strong>Graduate Research Assistant</strong> in the Epidemiology department, helping model
+                <strong>HPV-related cancer outcomes</strong>, and as a <strong>Teaching Assistant</strong> at the
+                <strong>Carlson School of Management</strong>, guiding students in Big Data technologies like Spark and
+                AWS.
+            </p>
 
-                <p>Outside the classroom and lab, I thrive in fast-paced, creative environments. I’m a frequent
-                    hackathon participant — I love the challenge of building something impactful, fast, and
-                    collaborative. It’s where many of my favorite ideas have started to take shape.</p>
-            </div>
+            <!-- Subsection: What I'm Building Now -->
+            <h4 class="about-subheading">What I’m Building Now</h4>
+            <p>
+                At the <strong>AI Innovation Lab @ Supercell</strong>, I’m working on an experimental AI-powered game
+                that blends <strong>real-time reasoning</strong> and <strong>world simulation</strong> to push the
+                boundaries of dynamic, intelligent gameplay — a fusion of storytelling and technology.
+            </p>
+
+            <!-- Subsection: Previous Experience -->
+            <h4 class="about-subheading">Previous Experience</h4>
+            <p>
+                Previously at <strong>Visa Inc.</strong>, I developed <strong>large-scale Spark pipelines</strong> in
+                Scala, validating 15M+ records daily to ensure data integrity. I completed my undergraduate studies at
+                the <strong>College of Engineering, Guindy</strong>, diving into AI, OS, databases, and more.
+            </p>
+
+            <!-- Subsection: Beyond the Classroom -->
+            <h4 class="about-subheading">What else I do?</h4>
+            <p>
+                I thrive in fast-paced, creative environments. I’m a frequent <strong>hackathon finalist</strong> and
+                love building fast, impactful tools. Outside of research, I explore generative agents, multimodal LLMs,
+                and immersive design systems.
+            </p>
         </div>
     </section>
 
@@ -1460,6 +1541,153 @@
                     </div>
                 </div>
 
+
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+
+                        <!-- Front Face -->
+                        <div class="flip-card-front">
+                            <div class="project-content">
+
+                                <!-- 📄 Label -->
+                                <span class="project-badge">📚 IEEE Published | Research Project</span>
+
+                                <!-- 🔤 Title -->
+                                <h3 class="project-title">Streamlining Architectural Design using Generative AI</h3>
+
+                                <!-- 📝 One-liner -->
+                                <p class="project-subheading">
+                                    An AI-driven system that transforms user prompts into floorplans, facades, and
+                                    interior visualizations
+                                </p>
+
+                                <!-- 🧱 Tech Stack -->
+                                <h5 class="subheading">Technologies Used</h5>
+                                <div class="project-stack">
+                                    <span class="stack-item">PyTorch</span>
+                                    <span class="stack-item">TensorFlow</span>
+                                    <span class="stack-item">CycleGAN</span>
+                                    <span class="stack-item">GNN</span>
+                                    <span class="stack-item">Transformer</span>
+                                    <span class="stack-item">Prompt Engineering</span>
+                                </div>
+
+                                <!-- 🔗 Buttons -->
+                                <div class="project-links">
+                                    <!-- Paper button with same style as GitHub -->
+                                    <a href="#" class="project-btn github-btn">
+                                        <i class="fas fa-file-pdf"></i> Paper
+                                    </a>
+
+                                    <!-- Demo button with original YouTube icon -->
+                                    <a href="#" class="project-btn youtube-btn">
+                                        <i class="fab fa-youtube"></i> Demo
+                                    </a>
+                                </div>
+
+                                <!-- 🔁 Flip Icon for Mobile -->
+                                <div class="flip-toggle-icon"
+                                    onclick="this.closest('.flip-card').classList.toggle('flipped')">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Back Face -->
+                        <div class="flip-card-back">
+                            <div class="project-content">
+                                <ul>
+                                    <li>Developed <strong>ARCHITECT</strong>, a generative AI system that transforms
+                                        prompts into 2D floorplans, facades, and interiors — all validated to TNCDBR
+                                        2019 housing regulations.</li>
+
+                                    <li>Used NER, GNNs, and MLPs to generate layouts and conduct Vastu analysis; applied
+                                        Neural Style Transfer with VGGs for realistic interior design visualizations.
+                                    </li>
+
+                                    <li>Built a full blueprint-to-3D pipeline with CycleGANs for façade generation,
+                                        Transformers for layout completion, and Blender for VR-ready 3D model rendering.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+
+                        <!-- Front Face -->
+                        <div class="flip-card-front">
+                            <div class="project-content">
+
+                                <!-- Label -->
+                                <span class="project-badge">🏆 Hackathon Top 5</span>
+
+                                <!-- Title -->
+                                <h3 class="project-title">HealthWagon: Emergency Medical Response Platform</h3>
+
+                                <!-- Subheading -->
+                                <p class="project-subheading">
+                                    AI-driven medical assistance built with real-time fall detection algorithm and
+                                    secured EHR access within 24
+                                    hours at K! Hacks.
+                                </p>
+
+                                <!-- Stack -->
+                                <div class="project-stack">
+                                    <span class="stack-item">React Native</span>
+                                    <span class="stack-item">Flask</span>
+                                    <span class="stack-item">MongoDB</span>
+                                    <span class="stack-item">REST API</span>
+                                    <span class="stack-item">AES Encryption</span>
+                                    <span class="stack-item">QR Code</span>
+                                    <span class="stack-item">Named Entity Recognition</span>
+                                    <span class="stack-item">spaCy</span>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="project-links">
+                                    <a href="#" class="project-btn github-btn">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                    <a href="#" class="project-btn youtube-btn">
+                                        <i class="fab fa-youtube"></i> Demo
+                                    </a>
+                                </div>
+
+                                <!-- Flip icon -->
+                                <div class="flip-toggle-icon"
+                                    onclick="this.closest('.flip-card').classList.toggle('flipped')">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Back Face -->
+                        <div class="flip-card-back">
+                            <div class="project-content">
+                                <ul>
+                                    <li>Developed a <strong>fall detection app</strong> with a custom algorithm that
+                                        auto-alerts <strong>hospitals</strong> and <strong>emergency contacts</strong>,
+                                        reducing response time in critical situations.</li>
+
+                                    <li>Built a <strong>QR-enabled ambulance app</strong> to access patient
+                                        <strong>health records</strong> and sync data with hospitals for faster,
+                                        informed response.</li>
+
+                                    <li>Implemented a <strong>secure EHR system</strong> with <strong>role-based
+                                            access</strong>, <strong>AES encryption</strong>, and a <strong>custom AI
+                                            chatbot with NER</strong> to simplify doctor reports for users.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1519,8 +1747,9 @@
         <div class="container">
             <div class="footer-content">
                 <div class="social-links">
-                    <a href="https://github.com/" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/" class="social-link" target="_blank"><i
+                    <a href="https://github.com/ArunachalamM101202" class="social-link" target="_blank"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arunachalam-manikandan/" class="social-link" target="_blank"><i
                             class="fab fa-linkedin-in"></i></a>
                     <a href="mailto:arunachalam101202@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
                 </div>
