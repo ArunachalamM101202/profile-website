@@ -127,7 +127,7 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            gap:180px;
+            gap: 180px;
         }
 
         .hero-text {
@@ -310,7 +310,7 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
             text-align: justify;
-            
+
         }
 
         .timeline-content:hover {
@@ -359,7 +359,7 @@
             color: var(--text-color);
         }
 
-        
+
 
         /* Projects Section */
         .projects-container {
@@ -397,6 +397,13 @@
             color: var(--highlight-color);
             margin-bottom: 20px;
             line-height: 1.6;
+        }
+
+        .subheading {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--highlight-color);
         }
 
         .project-stack {
@@ -475,6 +482,39 @@
             box-shadow: 0 10px 25px rgba(0, 113, 227, 0.3);
         }
 
+        .timeline-content .skills-container {
+            gap: 10px;
+            /* Previously it was 15px */
+            margin-top: 12px;
+            /* Optional: tighten spacing from 'Coursework' heading */
+            flex-wrap: wrap;
+        }
+
+        .timeline-content .skills-container .skill-tag {
+            background-color: rgba(46, 46, 48, 0.8);
+            border: 1px solid var(--highlight-color);
+            color: var(--text-color);
+            padding: 6px 14px;
+            /* smaller padding */
+            border-radius: 20px;
+            /* slightly tighter */
+            font-size: 0.8rem;
+            /* smaller text size */
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            cursor: default;
+        }
+
+
+
+        .timeline-content .skills-container .skill-tag:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0, 113, 227, 0.4);
+        }
+
         /* Footer */
         footer {
             background-color: var(--card-color);
@@ -519,6 +559,65 @@
             font-size: 1.1rem;
             line-height: 1.8;
             color: var(--highlight-color);
+        }
+
+        .gpa-progress {
+            margin-top: 15px;
+        }
+
+        .gpa-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .gpa-label {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .gpa-score {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .gpa-bar {
+            width: 100%;
+            height: 8px;
+            background-color: var(--card-color);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .gpa-fill {
+            width: 0%;
+            height: 100%;
+            background-color: var(--primary-color);
+            transition: width 1s ease;
+            transform-origin: left center;
+            /* Important for bounce */
+        }
+
+        /* Bounce animation keyframes */
+        @keyframes bounce-scale {
+            0% {
+                transform: scaleX(1);
+            }
+
+            80% {
+                transform: scaleX(1.05);
+            }
+
+            100% {
+                transform: scaleX(1);
+            }
         }
 
         .about-content p {
@@ -804,12 +903,14 @@
                     <h1 class="hero-name">Arunachalam Manikandan</h1>
                     <h2 class="hero-title">AI Innovation Lab @ Supercell | CS Grad Student at University of Minnesota,
                         Twin Cities | Former SDE Intern @Visa Inc '23</h2>
-                        <div class="hero-buttons">
-                            <a href="https://drive.google.com/file/d/1roFxUip8e99yfMznl-hOoGPmpTdhqSy1/view?usp=sharing" class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
-                            <a href="https://www.linkedin.com/in/arunachalam-manikandan/" target="_blank" class="btn btn-secondary">
-                                <i class="fab fa-linkedin-in"></i> LinkedIn
-                            </a>
-                        </div>
+                    <div class="hero-buttons">
+                        <a href="https://drive.google.com/file/d/1roFxUip8e99yfMznl-hOoGPmpTdhqSy1/view?usp=sharing"
+                            class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+                        <a href="https://www.linkedin.com/in/arunachalam-manikandan/" target="_blank"
+                            class="btn btn-secondary">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                        </a>
+                    </div>
                 </div>
                 <div class="hero-image">
                     <img src="photo_1.jpeg" alt="Arunachalam Manikandan" class="profile-img">
@@ -823,162 +924,224 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-               <p> Hi, I’m a Computer Science graduate student at the University of Minnesota, Twin Cities, with a focus on AI, Machine Learning, Natural Language Processing, and Advanced Software Engineering. Beyond coursework, I work as a Graduate Research Assistant in the Epidemiology department, where I help model HPV-related cancer outcomes. I also serve as a Teaching Assistant at the Carlson School of Management, guiding students through hands-on projects in Big Data, Spark, and AWS. </p>
+                <p> Hi, I’m a Computer Science graduate student at the University of Minnesota, Twin Cities, with a
+                    focus on AI, Machine Learning, Natural Language Processing, and Advanced Software Engineering.
+                    Beyond coursework, I work as a Graduate Research Assistant in the Epidemiology department, where I
+                    help model HPV-related cancer outcomes. I also serve as a Teaching Assistant at the Carlson School
+                    of Management, guiding students through hands-on projects in Big Data, Spark, and AWS. </p>
 
-<p>Right now, I’m building something I’m really excited about — an AI-powered game at the AI Innovation Lab at Supercell. It blends real-time reasoning and world simulation to rethink how gameplay can feel truly dynamic and intelligent. It’s a space where my passion for AI and storytelling really comes alive.</p>
+                <p>Right now, I’m building something I’m really excited about — an AI-powered game at the AI Innovation
+                    Lab at Supercell. It blends real-time reasoning and world simulation to rethink how gameplay can
+                    feel truly dynamic and intelligent. It’s a space where my passion for AI and storytelling really
+                    comes alive.</p>
 
-<p>Previously, I interned at Visa, where I worked on large-scale data pipelines in Apache Spark and Scala, tackling real-world data quality and infrastructure challenges. Before grad school, I completed my Bachelor’s in Information Technology at the College of Engineering, Guindy, diving deep into topics ranging from AI to OS, databases, and networks.</p>
+                <p>Previously, I interned at Visa, where I worked on large-scale data pipelines in Apache Spark and
+                    Scala, tackling real-world data quality and infrastructure challenges. Before grad school, I
+                    completed my Bachelor’s in Information Technology at the College of Engineering, Guindy, diving deep
+                    into topics ranging from AI to OS, databases, and networks.</p>
 
-<p>Outside the classroom and lab, I thrive in fast-paced, creative environments. I’m a frequent hackathon participant — I love the challenge of building something impactful, fast, and collaborative. It’s where many of my favorite ideas have started to take shape.</p>
+                <p>Outside the classroom and lab, I thrive in fast-paced, creative environments. I’m a frequent
+                    hackathon participant — I love the challenge of building something impactful, fast, and
+                    collaborative. It’s where many of my favorite ideas have started to take shape.</p>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-<section id="education">
-    <div class="container">
-        <h2 class="section-title">Education</h2>
-        <div class="timeline-container">
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline-container">
 
-            <!-- UMN -->
-            <div class="timeline-item timeline-left">
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <img src="images/umn.png" alt="UMN Logo" class="timeline-img">
-                        <div class="timeline-text">
-                            <h3>University of Minnesota, Twin Cities</h3>
-                            <h4>Master of Science in Computer Science</h4>
+                <!-- UMN -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <img src="images/umn.png" alt="UMN Logo" class="timeline-img">
+                            <div class="timeline-text">
+                                <h3>University of Minnesota, Twin Cities</h3>
+                                <h4>Master of Science in Computer Science</h4>
+                            </div>
+                        </div>
+                        <span class="date">Aug. 2024 – May 2026</span>
+                        <div class="gpa-progress">
+                            <div class="gpa-info">
+                                <span class="gpa-label">GPA</span>
+                                <span class="gpa-score">4.0 / 4.0</span>
+                            </div>
+                            <div class="gpa-bar">
+                                <div class="gpa-fill" data-width="100%"></div> <!-- 100% for 4.0/4.0 -->
+                            </div>
+                        </div>
+
+                        <h5 class="subheading">Coursework</h5>
+                        <div class="skills-container">
+                            <div class="skill-tag">Natural Language Processing</div>
+                            <div class="skill-tag">Advanced Machine Learning</div>
+                            <div class="skill-tag">Introduction to LLM Systems</div>
+                            <div class="skill-tag">Artificial Intelligence I</div>
+                            <div class="skill-tag">Machine Learning Fundamentals</div>
+                            <div class="skill-tag">User Interface Design</div>
+                            <div class="skill-tag">CSCI Colloquium</div>
+
                         </div>
                     </div>
-                    <span class="date">Aug. 2024 – May 2026</span>
-                    <p>GPA: 4.0/4.0</p>
                 </div>
-            </div>
 
-            <!-- CEG -->
-            <div class="timeline-item timeline-right">
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <img src="images/ceg.webp" alt="CEG Logo" class="timeline-img">
-                        <div class="timeline-text">
-                            <h3>College of Engineering, Guindy</h3>
-                            <h4>Bachelor of Technology in Information Technology</h4>
+                <!-- CEG -->
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <img src="images/ceg.webp" alt="CEG Logo" class="timeline-img">
+                            <div class="timeline-text">
+                                <h3>College of Engineering, Guindy</h3>
+                                <h4>Bachelor of Technology in Information Technology</h4>
+                            </div>
+                        </div>
+                        <span class="date">Aug. 2020 – May 2024</span>
+                        <div class="gpa-progress">
+                            <div class="gpa-info">
+                                <span class="gpa-label">GPA</span>
+                                <span class="gpa-score">9.37 / 10.0</span>
+                            </div>
+                            <div class="gpa-bar">
+                                <div class="gpa-fill" data-width="100%"></div> <!-- 100% for 4.0/4.0 -->
+                            </div>
+                        </div>
+
+                        <h5 class="subheading">Coursework</h5>
+                        <div class="skills-container">
+                            <div class="skill-tag">Unix Internals</div>
+                            <div class="skill-tag">Cloud Computing</div>
+                            <div class="skill-tag">Artificial Intelligence</div>
+                            <div class="skill-tag">Operating Systems</div>
+                            <div class="skill-tag">Microservices</div>
+                            <div class="skill-tag">Distributed Systems</div>
+                            <div class="skill-tag">Advanced Databases</div>
+                            <div class="skill-tag">Software Engineering</div>
+                            <div class="skill-tag">Digital Image Processing</div>
+
+                            <div class="skill-tag">Data Structures and Algorithms</div>
                         </div>
                     </div>
-                    <span class="date">Aug. 2020 – May 2024</span>
-                    <p>GPA: 9.37/10</p>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Experience Section -->
-<section id="experience">
-    <div class="container">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline-container">
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline-container">
 
-            <!-- Supercell -->
-            <div class="timeline-item timeline-right">
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <img src="images/supercell.webp" alt="Supercell Logo" class="timeline-img">
-                        <div>
-                            <h3>AI Engineer @ AI Innovation Lab</h3>
-                            <h4>Supercell</h4>
+                <!-- Supercell -->
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <img src="images/supercell.webp" alt="Supercell Logo" class="timeline-img">
+                            <div>
+                                <h3>AI Engineer @ AI Innovation Lab</h3>
+                                <h4>Supercell</h4>
+                            </div>
                         </div>
+                        <span class="date">April. 2025 – Present</span>
+                        <p>
+                            Simulating cancer screening protocols to optimize early detection and treatment pathways
+                            using Java-based models to project patient outcomes and enhance public health strategies.
+                        </p>
                     </div>
-                    <span class="date">April. 2025 – Present</span>
-                    <p>
-                        Simulating cancer screening protocols to optimize early detection and treatment pathways
-                        using Java-based models to project patient outcomes and enhance public health strategies.
-                    </p>
                 </div>
-            </div>
 
-            <!-- TA @ UMN -->
-            <div class="timeline-item timeline-left">
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <img src="images/umn.png" alt="UMN Logo" class="timeline-img">
-                        <div>
-                            <h3>Graduate Teaching Assistant</h3>
-                            <h4>University of Minnesota, Twin Cities</h4>
+                <!-- TA @ UMN -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <img src="images/umn.png" alt="UMN Logo" class="timeline-img">
+                            <div>
+                                <h3>Graduate Teaching Assistant</h3>
+                                <h4>University of Minnesota, Twin Cities</h4>
+                            </div>
                         </div>
+                        <span class="date">Jan. 2025 – Present</span>
+                        <p>
+                            Supported students in mastering Hadoop, Hive, Spark, and AWS Cloud Computing. Led hands-on
+                            labs
+                            to build scalable data pipelines and deploy machine learning solutions using SageMaker and
+                            MLOps.
+                        </p>
                     </div>
-                    <span class="date">Jan. 2025 – Present</span>
-                    <p>
-                        Supported students in mastering Hadoop, Hive, Spark, and AWS Cloud Computing. Led hands-on labs
-                        to build scalable data pipelines and deploy machine learning solutions using SageMaker and MLOps.
-                    </p>
                 </div>
-            </div>
 
-            <!-- RA @ UMN -->
-            <div class="timeline-item timeline-right">
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <img src="images/umn.png" alt="UMN Logo" class="timeline-img">
-                        <div>
-                            <h3>Graduate Research Assistant</h3>
-                            <h4>University of Minnesota, Twin Cities</h4>
+                <!-- RA @ UMN -->
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <img src="images/umn.png" alt="UMN Logo" class="timeline-img">
+                            <div>
+                                <h3>Graduate Research Assistant</h3>
+                                <h4>University of Minnesota, Twin Cities</h4>
+                            </div>
                         </div>
+                        <span class="date">Sept. 2024 – Present</span>
+                        <p>
+                            Simulating cancer screening protocols to optimize early detection and treatment pathways
+                            using
+                            Java-based models to project patient outcomes and enhance public health strategies.
+                        </p>
                     </div>
-                    <span class="date">Sept. 2024 – Present</span>
-                    <p>
-                        Simulating cancer screening protocols to optimize early detection and treatment pathways using
-                        Java-based models to project patient outcomes and enhance public health strategies.
-                    </p>
                 </div>
-            </div>
 
-            <!-- Visa Intern -->
-            <div class="timeline-item timeline-left">
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <img src="images/visa.jpg" alt="Visa Logo" class="timeline-img">
-                        <div>
-                            <h3>Software Development Engineering Intern</h3>
-                            <h4>Visa Inc.</h4>
+                <!-- Visa Intern -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <img src="images/visa.jpg" alt="Visa Logo" class="timeline-img">
+                            <div>
+                                <h3>Software Development Engineering Intern</h3>
+                                <h4>Visa Inc.</h4>
+                            </div>
                         </div>
+                        <span class="date">Jun. 2023 – Aug. 2023</span>
+                        <ul>
+                            <li>
+                                Created a efficient Spark application in Scala, conducting daily checks on 15 million
+                                records, which identified data discrepancies among multiple tables through custom
+                                validations.
+                            </li>
+                            <li>
+                                Implemented robust validation algorithms to reduce data discrepancies by 50% within
+                                Visa's
+                                infrastructure and generate automated daily reports summarizing discrepancies enhancing
+                                data integrity.
+                            </li>
+                        </ul>
                     </div>
-                    <span class="date">Jun. 2023 – Aug. 2023</span>
-                    <ul>
-                        <li>
-                            Created a efficient Spark application in Scala, conducting daily checks on 15 million
-                            records, which identified data discrepancies among multiple tables through custom validations.
-                        </li>
-                        <li>
-                            Implemented robust validation algorithms to reduce data discrepancies by 50% within Visa's
-                            infrastructure and generate automated daily reports summarizing discrepancies enhancing
-                            data integrity.
-                        </li>
-                    </ul>
                 </div>
-            </div>
 
-            <div class="timeline-item timeline-right">
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <img src="images/movate.jpeg" alt="UMN Logo" class="timeline-img">
-                        <div>
-                            <h3>Intern</h3>
-                            <h4>Movate (CSS Corp)</h4>
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <img src="images/movate.jpeg" alt="UMN Logo" class="timeline-img">
+                            <div>
+                                <h3>Intern</h3>
+                                <h4>Movate (CSS Corp)</h4>
+                            </div>
                         </div>
+                        <span class="date">Sept. 2024 – Present</span>
+                        <p>
+                            Simulating cancer screening protocols to optimize early detection and treatment pathways
+                            using
+                            Java-based models to project patient outcomes and enhance public health strategies.
+                        </p>
                     </div>
-                    <span class="date">Sept. 2024 – Present</span>
-                    <p>
-                        Simulating cancer screening protocols to optimize early detection and treatment pathways using
-                        Java-based models to project patient outcomes and enhance public health strategies.
-                    </p>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Projects Section -->
     <section id="projects">
@@ -1226,6 +1389,33 @@
                 }
             </style>
         `);
+
+        // GPA bar fill animation
+        // GPA bar fill animation
+        const gpaFills = document.querySelectorAll('.gpa-fill');
+
+        const gpaObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fill = entry.target;
+                    const targetWidth = fill.getAttribute('data-width');
+                    fill.style.width = targetWidth;
+
+                    // Add bounce effect after width transition
+                    setTimeout(() => {
+                        fill.style.animation = 'bounce-scale 0.4s ease';
+                    }, 1000); // 1s matches your width transition time
+
+                    observer.unobserve(fill); // Animate once only
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        gpaFills.forEach(fill => {
+            gpaObserver.observe(fill);
+        });
     </script>
 </body>
 
