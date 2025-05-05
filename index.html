@@ -675,6 +675,9 @@
             flex-wrap: wrap;
         }
 
+        .justify {
+            text-align: justify;
+        }
         .timeline-content .skills-container .skill-tag {
             background-color: rgba(46, 46, 48, 0.8);
             border: 1px solid var(--highlight-color);
@@ -691,7 +694,9 @@
             cursor: default;
         }
 
-
+        ul li{
+            text-align: justify;
+        }
 
         .timeline-content .skills-container .skill-tag:hover {
             background-color: var(--primary-color);
@@ -1081,7 +1086,7 @@
                 <div class="logo">ARUNACHALAM MANIKANDAN</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">About Me</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -1120,7 +1125,7 @@
                     <div class="hero-buttons">
                         <a href="https://drive.google.com/file/d/1roFxUip8e99yfMznl-hOoGPmpTdhqSy1/view?usp=sharing"
                             class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
-                        <a href="https://linkedin.com/in/yourprofile" class="btn btn-outline linkedin-btn"
+                        <a href="https://www.linkedin.com/in/arunachalam-manikandan/" class="btn btn-outline linkedin-btn"
                             target="_blank">
                             <i class="fab fa-linkedin-in"></i> LinkedIn
                         </a>
@@ -1150,7 +1155,7 @@
 
             <!-- Subsection: Education & Research -->
             <h4 class="about-subheading">Education & Research</h4>
-            <p>
+            <p class="justify">
                 I'm a Computer Science graduate student at the <strong>University of Minnesota, Twin Cities</strong>,
                 focused on AI, Machine Learning, NLP, and Advanced Software Engineering.
                 I serve as a <strong>Graduate Research Assistant</strong> in the Epidemiology department, helping model
@@ -1161,7 +1166,7 @@
 
             <!-- Subsection: What I'm Building Now -->
             <h4 class="about-subheading">What I’m Building Now</h4>
-            <p>
+            <p class="justify">
                 At the <strong>AI Innovation Lab @ Supercell</strong>, I’m working on an experimental AI-powered game
                 that blends <strong>real-time reasoning</strong> and <strong>world simulation</strong> to push the
                 boundaries of dynamic, intelligent gameplay — a fusion of storytelling and technology.
@@ -1169,7 +1174,7 @@
 
             <!-- Subsection: Previous Experience -->
             <h4 class="about-subheading">Previous Experience</h4>
-            <p>
+            <p class="justify">
                 Previously at <strong>Visa Inc.</strong>, I developed <strong>large-scale Spark pipelines</strong> in
                 Scala, validating 15M+ records daily to ensure data integrity. I completed my undergraduate studies at
                 the <strong>College of Engineering, Guindy</strong>, diving into AI, OS, databases, and more.
@@ -1177,7 +1182,7 @@
 
             <!-- Subsection: Beyond the Classroom -->
             <h4 class="about-subheading">What else I do?</h4>
-            <p>
+            <p class="justify">
                 I thrive in fast-paced, creative environments. I’m a frequent <strong>hackathon finalist</strong> and
                 love building fast, impactful tools. Outside of research, I explore generative agents, multimodal LLMs,
                 and immersive design systems.
@@ -1241,7 +1246,7 @@
                         <div class="gpa-progress">
                             <div class="gpa-info">
                                 <span class="gpa-label">GPA</span>
-                                <span class="gpa-score">9.37 / 10.0</span>
+                                <span class="gpa-score">9.37 / 10</span>
                             </div>
                             <div class="gpa-bar">
                                 <div class="gpa-fill" data-width="100%"></div> <!-- 100% for 4.0/4.0 -->
@@ -1434,7 +1439,7 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="date">Jun. 2023 – Aug. 2023</span>
+                        <span class="date">Jul. 2022 – Aug. 2022</span>
                         <ul>
                             <li>Designed and deployed an AI-powered chatbot to streamline the U.S. visa application
                                 process, enabling users to schedule interviews, understand eligibility steps, and
@@ -1508,7 +1513,7 @@
                                 <!-- 🔗 Links -->
                                 <div class="project-links">
                                     <a href="https://cse.umn.edu/cs/news/cse-team-triumphs-hackathon" class="project-btn github-btn">
-                                        <i class="fas fa-file-pdf"></i> Paper
+                                        <i class="fa-solid fa-newspaper"></i>News
                                     </a>
                                     <a href="https://www.youtube.com/watch?v=XzmNL9hF_1s" class="project-btn youtube-btn"><i class="fab fa-youtube"></i> Demo</a>
                                 </div>
@@ -1635,10 +1640,11 @@
                                 <p class="project-subheading">
                                     AI-driven medical assistance built with real-time fall detection algorithm and
                                     secured EHR access within 24
-                                    hours at K! Hacks.
+                                    hours.
                                 </p>
 
                                 <!-- Stack -->
+                                <h5 class="subheading">Technologies Used</h5>
                                 <div class="project-stack">
                                     <span class="stack-item">React Native</span>
                                     <span class="stack-item">Flask</span>
@@ -1646,7 +1652,7 @@
                                     <span class="stack-item">REST API</span>
                                     <span class="stack-item">AES Encryption</span>
                                     <span class="stack-item">QR Code</span>
-                                    <span class="stack-item">Named Entity Recognition</span>
+                                    <!-- <span class="stack-item">Named Entity Recognition</span> -->
                                     <span class="stack-item">spaCy</span>
                                 </div>
 
@@ -1704,6 +1710,7 @@
                 <div class="skill-tag">Java</div>
                 <div class="skill-tag">Python</div>
                 <div class="skill-tag">MySQL</div>
+                <div class="skill-tag">PostgreSQL</div>
                 <div class="skill-tag">NoSQL (MongoDB)</div>
                 <div class="skill-tag">JavaScript</div>
                 <div class="skill-tag">HTML/CSS</div>
