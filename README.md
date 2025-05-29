@@ -26,6 +26,7 @@ The site is built with custom HTML, CSS, and JavaScript — fully responsive and
 - [ ] 🚀 **Update Skills section** — Group by category (Languages, Frameworks, Tools) with better icons or sorting
 - [ ] 💬 **Add Recommendations section** — Display peer/professor/manager testimonials in a slider format
 - [ ] 📰 **Add “Featured In” section** — Logos or cards for mentions in news, blogs, or hackathons
-- [ ] 🎨 **Dark mode toggle** — Allow users to switch between light/dark themes for accessibility
+- [ Done ] 🎨 **Dark mode toggle** — Allow users to switch between light/dark themes for accessibility
+- [ Done ] **Buy me a coffee button**
 - [ ] 📱 **Make cards swipeable on mobile** — Especially project flip cards; ensure content isn't hidden or jumpy
 - [ ] 🖼️ **Add profile banner image** — Soft background or blurred landscape behind your profile pic

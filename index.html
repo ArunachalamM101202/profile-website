@@ -1164,10 +1164,10 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <button id="theme-toggle"
-                        style="margin-left: 20px; background: none; border: 1px solid var(--text-color); color: var(--text-color); padding: 6px 12px; border-radius: 6px; cursor: pointer;">
-                        Toggle Theme
-                    </button>
+                    <li><button id="theme-toggle" 
+    style="margin-left: 20px; background: none; border: none; color: var(--text-color); font-size: 1.3rem; cursor: pointer;">
+    <i id="theme-icon" class="fas fa-moon"></i>
+</button></li>
                 </ul>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
@@ -2009,11 +2009,24 @@
             gpaObserver.observe(fill);
         });
 
-        // Theme toggle
         const toggleBtn = document.getElementById('theme-toggle');
-        toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-        });
+const themeIcon = document.getElementById('theme-icon');
+
+function updateThemeIcon() {
+    const isLight = document.body.classList.contains('light-mode');
+    themeIcon.className = isLight ? 'fas fa-sun' : 'fas fa-moon';
+}
+
+// Single event listener only
+toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    updateThemeIcon();
+});
+
+// Run once on page load
+updateThemeIcon();
+
+        
 
     </script>
 
