@@ -147,24 +147,32 @@
         } */
 
         .hero-name {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
-    line-height: 1.1;
-    background: linear-gradient(90deg, #b16cea, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            background: linear-gradient(90deg, #b16cea, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
 
-    background-size: 200% auto;
-    animation: gradientMove 5s ease infinite;
-}
+            background-size: 200% auto;
+            animation: gradientMove 5s ease infinite;
+        }
 
-@keyframes gradientMove {
-    0% { background-position: 0% center; }
-    50% { background-position: 100% center; }
-    100% { background-position: 0% center; }
-}
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% center;
+            }
+
+            50% {
+                background-position: 100% center;
+            }
+
+            100% {
+                background-position: 0% center;
+            }
+        }
 
         .hero-title {
             font-size: 1.2rem;
@@ -203,6 +211,68 @@
             background-color: transparent;
             color: var(--secondary-color);
             border: 1px solid var(--secondary-color);
+        }
+
+        .light-mode {
+            --background-color: #ffffff;
+            --text-color: #000000;
+            --card-color: #f4f4f4;
+            /* ← important fix */
+            --highlight-color: #444444;
+            --accent-color: #333333;
+            --timeline-color: #dddddd;
+        }
+
+        .light-mode .social-link {
+            background-color: #f4f4f4;
+            color: #000000;
+        }
+
+        .light-mode .skill-tag {
+            background-color: #349554;
+            color: #000000;
+            border: 1px solid #ccc;
+        }
+
+        .light-mode .timeline-content .skills-container .skill-tag {
+            background-color: #e0e0e0;
+            color: #000;
+            border: 1px solid #ccc;
+        }
+
+        .light-mode .project-stack .stack-item {
+            background-color: #e0e0e0;
+            color: #000;
+            border: 1px solid #ccc;
+        }
+
+        .light-mode header {
+            background-color: #ffffff !important;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        .light-mode .logo,
+        .light-mode .nav-links a {
+            color: #000000;
+        }
+
+        .light-mode .nav-links a:hover::after {
+            background-color: #0071e3;
+            /* Optional: match primary color */
+        }
+
+
+        .light-mode .timeline-content,
+        .light-mode .flip-card-front,
+        .light-mode .flip-card-back {
+            background-color: #f2f2f2;
+            color: #000000;
+        }
+
+        .light-mode .project-badge {
+            background-color: rgba(0, 0, 0, 0.05);
+            color: #333;
         }
 
         .btn-primary:hover {
@@ -488,34 +558,36 @@
         }
 
         .about-highlight {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-    background: linear-gradient(270deg, #ffffff, #0071e3, #2997ff);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientShift 6s ease infinite;
-    line-height: 1.6;
-    text-align: center;
-}
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            background: linear-gradient(270deg, #ffffff, #0071e3, #2997ff);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 6s ease infinite;
+            line-height: 1.6;
+            text-align: center;
+        }
 
-/* Keyframes for shifting gradient */
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+        /* Keyframes for shifting gradient */
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
 
-.about-highlight:hover {
-    background-position: right center;
-}
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .about-highlight:hover {
+            background-position: right center;
+        }
 
         .about-subheading {
             font-size: 1.1rem;
@@ -678,6 +750,7 @@
         .justify {
             text-align: justify;
         }
+
         .timeline-content .skills-container .skill-tag {
             background-color: rgba(46, 46, 48, 0.8);
             border: 1px solid var(--highlight-color);
@@ -694,7 +767,7 @@
             cursor: default;
         }
 
-        ul li{
+        ul li {
             text-align: justify;
         }
 
@@ -1091,6 +1164,10 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <button id="theme-toggle"
+                        style="margin-left: 20px; background: none; border: 1px solid var(--text-color); color: var(--text-color); padding: 6px 12px; border-radius: 6px; cursor: pointer;">
+                        Toggle Theme
+                    </button>
                 </ul>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
@@ -1111,7 +1188,10 @@
             <li><a href="#experience" class="mobile-link">Experience</a></li>
             <li><a href="#projects" class="mobile-link">Projects</a></li>
             <li><a href="#skills" class="mobile-link">Skills</a></li>
+
         </ul>
+
+
     </div>
 
     <!-- Hero Section -->
@@ -1125,14 +1205,23 @@
                     <div class="hero-buttons">
                         <a href="https://drive.google.com/file/d/1roFxUip8e99yfMznl-hOoGPmpTdhqSy1/view?usp=sharing"
                             class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
-                        <a href="https://www.linkedin.com/in/arunachalam-manikandan/" class="btn btn-outline linkedin-btn"
-                            target="_blank">
+                        <a href="https://www.linkedin.com/in/arunachalam-manikandan/"
+                            class="btn btn-outline linkedin-btn" target="_blank">
                             <i class="fab fa-linkedin-in"></i> LinkedIn
                         </a>
                         <a href="https://github.com/ArunachalamM101202" class="btn btn-outline github-btn"
                             target="_blank">
                             <i class="fab fa-github"></i> GitHub
                         </a>
+
+
+                    </div>
+                    <div style="margin-top: 10px; transform: scale(0.75); transform-origin: left;">
+                        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+                            data-name="bmc-button" data-slug="arunachalam" data-color="#FFDD00" data-emoji=""
+                            data-font="Poppins" data-text="Buy me a coffee" data-outline-color="#000000"
+                            data-font-color="#000000" data-coffee-color="#ffffff">
+                            </script>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -1149,9 +1238,12 @@
 
             <!-- 1-Line Summary -->
             <p class="about-highlight">
-                " <strong>I design and deploy scalable LLM architectures, RAG pipelines, and agentic frameworks</strong> that make cutting-edge AI <strong>usable, responsive, and production-ready</strong>.<br>
-                I also work across the stack — building <strong>robust APIs</strong>, <strong>backend systems</strong>, and occasionally <strong>web or mobile interfaces</strong>, with a strong foundation in <strong>machine learning</strong> and real-world deployment." 
-              </p>
+                " <strong>I design and deploy scalable LLM architectures, RAG pipelines, and agentic frameworks</strong>
+                that make cutting-edge AI <strong>usable, responsive, and production-ready</strong>.<br>
+                I also work across the stack — building <strong>robust APIs</strong>, <strong>backend systems</strong>,
+                and occasionally <strong>web or mobile interfaces</strong>, with a strong foundation in <strong>machine
+                    learning</strong> and real-world deployment."
+            </p>
 
             <!-- Subsection: Education & Research -->
             <h4 class="about-subheading">Education & Research</h4>
@@ -1362,7 +1454,7 @@
                                 </div>
                             </div>
                         </div>
-                        <span class="date">Jan. 2025 – Present</span>
+                        <span class="date">Sep. 2024 – Present</span>
                         <ul>
                             <li>Developed and maintained Java-based simulation models for dual-stain cancer screening,
                                 driving research on early detection strategies and patient outcome optimization.</li>
@@ -1500,7 +1592,7 @@
 
                                 <!-- 💻 Stack Tags -->
                                 <h5 class="subheading">Technologies Used</h5>
-                                <div class="skills-container">
+                                <div class="project-stack">
                                     <div class="stack-item">Python</div>
                                     <div class="stack-item">Streamlit</div>
                                     <div class="stack-item">Flask</div>
@@ -1512,10 +1604,12 @@
 
                                 <!-- 🔗 Links -->
                                 <div class="project-links">
-                                    <a href="https://cse.umn.edu/cs/news/cse-team-triumphs-hackathon" class="project-btn github-btn">
+                                    <a href="https://cse.umn.edu/cs/news/cse-team-triumphs-hackathon"
+                                        class="project-btn github-btn">
                                         <i class="fa-solid fa-newspaper"></i>News
                                     </a>
-                                    <a href="https://www.youtube.com/watch?v=XzmNL9hF_1s" class="project-btn youtube-btn"><i class="fab fa-youtube"></i> Demo</a>
+                                    <a href="https://www.youtube.com/watch?v=XzmNL9hF_1s"
+                                        class="project-btn youtube-btn"><i class="fab fa-youtube"></i> Demo</a>
                                 </div>
 
                                 <!-- 🔁 Flip Icon for Mobile -->
@@ -1582,12 +1676,14 @@
                                 <!-- 🔗 Buttons -->
                                 <div class="project-links">
                                     <!-- Paper button with same style as GitHub -->
-                                    <a href="https://ieeexplore.ieee.org/document/10782715" class="project-btn github-btn">
+                                    <a href="https://ieeexplore.ieee.org/document/10782715"
+                                        class="project-btn github-btn">
                                         <i class="fas fa-file-pdf"></i> Paper
                                     </a>
 
                                     <!-- Demo button with original YouTube icon -->
-                                    <a href="https://www.youtube.com/watch?v=oYGnE332zBI" class="project-btn youtube-btn">
+                                    <a href="https://www.youtube.com/watch?v=oYGnE332zBI"
+                                        class="project-btn youtube-btn">
                                         <i class="fab fa-youtube"></i> Demo
                                     </a>
                                 </div>
@@ -1658,10 +1754,12 @@
 
                                 <!-- Buttons -->
                                 <div class="project-links">
-                                    <a href="https://github.com/Team-AllStars/HealthWagon" class="project-btn github-btn">
+                                    <a href="https://github.com/Team-AllStars/HealthWagon"
+                                        class="project-btn github-btn">
                                         <i class="fab fa-github"></i> GitHub
                                     </a>
-                                    <a href="https://www.youtube.com/watch?v=pXllO6j6cqk" class="project-btn youtube-btn">
+                                    <a href="https://www.youtube.com/watch?v=pXllO6j6cqk"
+                                        class="project-btn youtube-btn">
                                         <i class="fab fa-youtube"></i> Demo
                                     </a>
                                 </div>
@@ -1684,7 +1782,8 @@
 
                                     <li>Built a <strong>QR-enabled ambulance app</strong> to access patient
                                         <strong>health records</strong> and sync data with hospitals for faster,
-                                        informed response.</li>
+                                        informed response.
+                                    </li>
 
                                     <li>Implemented a <strong>secure EHR system</strong> with <strong>role-based
                                             access</strong>, <strong>AES encryption</strong>, and a <strong>custom AI
@@ -1909,7 +2008,17 @@
         gpaFills.forEach(fill => {
             gpaObserver.observe(fill);
         });
+
+        // Theme toggle
+        const toggleBtn = document.getElementById('theme-toggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+        });
+
     </script>
+
+    <!-- Buy Me a Coffee Button -->
+
 </body>
 
 </html>
