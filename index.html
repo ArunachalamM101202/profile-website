@@ -24,6 +24,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
   <!-- CSS Files -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
@@ -47,10 +50,10 @@
       <nav class="header__nav" role="navigation" aria-label="Main navigation">
         <ul class="nav__list">
           <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
           <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
           <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
           <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-          <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
         
@@ -79,10 +82,10 @@
   <nav class="mobile-nav" id="mobile-nav" aria-hidden="true" role="navigation" aria-label="Mobile navigation">
     <ul class="mobile-nav__list">
       <li><a href="#about" class="mobile-nav__link">About</a></li>
+      <li><a href="#education" class="mobile-nav__link">Education</a></li>
       <li><a href="#experience" class="mobile-nav__link">Experience</a></li>
       <li><a href="#projects" class="mobile-nav__link">Projects</a></li>
       <li><a href="#skills" class="mobile-nav__link">Skills</a></li>
-      <li><a href="#education" class="mobile-nav__link">Education</a></li>
       <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
     </ul>
     <div class="mobile-nav__social"></div>
@@ -102,7 +105,7 @@
       
       <div class="hero__content">
         <div class="hero__text">
-          <p class="hero__greeting">👋 Hello, World!</p>
+          <p class="hero__greeting"><i data-lucide="hand" class="icon-inline"></i> Hello, World!</p>
           <h1 class="hero__name">Hi, I'm <span class="gradient-text">Arun</span></h1>
           <p class="hero__title">CS Grad Student & AI Engineer</p>
           <p class="hero__description">
@@ -183,6 +186,21 @@
       </div>
     </section>
 
+    <!-- Education Section -->
+    <section class="education-section section" id="education">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-label">Academic</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-description">My academic background and continuous learning journey.</p>
+        </div>
+        
+        <div class="education-grid">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
     <!-- Experience Section -->
     <section class="experience-section section" id="experience">
       <div class="container">
@@ -228,21 +246,6 @@
       </div>
     </section>
 
-    <!-- Education Section -->
-    <section class="education-section section" id="education">
-      <div class="container">
-        <div class="section-header" data-animate="fade-up">
-          <span class="section-label">Academic</span>
-          <h2 class="section-title">Education</h2>
-          <p class="section-description">My academic background and continuous learning journey.</p>
-        </div>
-        
-        <div class="education-grid">
-          <!-- Content will be populated by JavaScript -->
-        </div>
-      </div>
-    </section>
-
     <!-- Contact Section -->
     <section class="contact-section section" id="contact">
       <div class="container">
@@ -258,10 +261,7 @@
           </div>
           
           <a href="#" class="btn btn--primary resume-btn" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-              <path fill-rule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm5.845 17.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V12a.75.75 0 00-1.5 0v4.19l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z" clip-rule="evenodd"/>
-              <path d="M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z"/>
-            </svg>
+            <i data-lucide="file-down"></i>
             Download Resume
           </a>
           
@@ -282,9 +282,9 @@
         
         <nav class="footer__links" aria-label="Footer navigation">
           <a href="#about" class="footer__link">About</a>
+          <a href="#education" class="footer__link">Education</a>
           <a href="#experience" class="footer__link">Experience</a>
           <a href="#projects" class="footer__link">Projects</a>
-          <a href="#contact" class="footer__link">Contact</a>
         </nav>
         
         <div class="footer__social">
@@ -300,5 +300,14 @@
 
   <!-- JavaScript -->
   <script type="module" src="js/main.js"></script>
+  
+  <!-- Initialize Lucide Icons -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
 </body>
 </html>

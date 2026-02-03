@@ -322,7 +322,7 @@ ${categoryData.join(' • ')}
 │  ${exp.position.toUpperCase().substring(0, 57).padEnd(57)} │
 │  @ ${exp.company.substring(0, 55).padEnd(55)} │
 │  ${exp.duration.padEnd(57)} │
-│  📍 ${exp.location.padEnd(54)} │
+│  Location: ${exp.location.padEnd(47)} │
 └─────────────────────────────────────────────────────────────┘
 
 ${exp.responsibilities.map(r => `  ▹ ${this.wrapText(r, 55)}`).join('\n\n')}
@@ -343,7 +343,7 @@ ${exp.responsibilities.map(r => `  ▹ ${this.wrapText(r, 55)}`).join('\n\n')}
 │  ${edu.degree.toUpperCase().substring(0, 57).padEnd(57)} │
 │  ${edu.institution.substring(0, 57).padEnd(57)} │
 │  ${edu.duration.padEnd(57)} │
-│  🎓 GPA: ${edu.gpa.padEnd(49)} │
+│  GPA: ${edu.gpa.padEnd(52)} │
 └─────────────────────────────────────────────────────────────┘
 
 <span class="terminal__line--info">Coursework: ${edu.coursework.slice(0, 4).join(', ')}...</span>
@@ -372,9 +372,9 @@ ${exp.responsibilities.map(r => `  ▹ ${this.wrapText(r, 55)}`).join('\n\n')}
     
     let badge = '';
     if (proj.achievement) {
-      badge = `🏆 ${proj.achievement}`;
+      badge = `[AWARD] ${proj.achievement}`;
     } else if (proj.publication) {
-      badge = `📄 ${proj.publication}`;
+      badge = `[PUBLISHED] ${proj.publication}`;
     }
     
     this.addLine(`
@@ -437,10 +437,10 @@ ${proj.description.map(d => `  ${this.wrapText(d, 55)}`).join('\n\n')}
 │  CONTACT INFORMATION                                         │
 └─────────────────────────────────────────────────────────────┘
 
-  📧 Email    : ${contact.email}
-  📱 Phone    : ${contact.phone}
-  💼 LinkedIn : ${contact.linkedin}
-  🐙 GitHub   : ${contact.github_alt}
+  [EMAIL]    : ${contact.email}
+  [PHONE]    : ${contact.phone}
+  [LINKEDIN] : ${contact.linkedin}
+  [GITHUB]   : ${contact.github_alt}
 
 ─────────────────────────────────────────────────────────────
 Type 'social' to open links or 'resume' to view CV
