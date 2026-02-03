@@ -1,884 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arunachalam Manikandan</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arunachalam Manikandan - AI Engineer & CS Graduate Student specializing in LLM architectures, RAG pipelines, and agentic frameworks.">
+  <meta name="keywords" content="AI Engineer, Machine Learning, LLM, RAG, Full Stack Developer, Portfolio">
+  <meta name="author" content="Arunachalam Manikandan">
+  <meta name="theme-color" content="#000000">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arunachalam Manikandan | AI Engineer">
+  <meta property="og:description" content="AI Engineer specializing in LLM architectures, RAG pipelines, and agentic frameworks.">
+  <meta property="og:image" content="photo_1.jpeg">
+  
+  <title>Arunachalam Manikandan | AI Engineer & CS Graduate Student</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="photo_1.jpeg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <nav>
-                <div class="logo">ARUNACHALAM MANIKANDAN</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><button id="theme-toggle" 
-    style="margin-left: 20px; background: none; border: none; color: var(--text-color); font-size: 1.3rem; cursor: pointer;">
-    <i id="theme-icon" class="fas fa-moon"></i>
-</button></li>
-                </ul>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
-    </header>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav" id="mobile-nav">
-        <div class="close-menu">
-            <i class="fas fa-times"></i>
-        </div>
-        <ul>
-            <li><a href="#home" class="mobile-link">Home</a></li>
-            <li><a href="#about" class="mobile-link">About</a></li>
-            <li><a href="#education" class="mobile-link">Education</a></li>
-            <li><a href="#experience" class="mobile-link">Experience</a></li>
-            <li><a href="#projects" class="mobile-link">Projects</a></li>
-            <li><a href="#skills" class="mobile-link">Skills</a></li>
-
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a href="#" class="header__logo" aria-label="Home">AM</a>
+      
+      <nav class="header__nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
-
-
+        
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" aria-label="Switch to light mode">
+          <svg class="theme-toggle__icon theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
     </div>
+  </header>
 
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav__overlay" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-hidden="true" role="navigation" aria-label="Mobile navigation">
+    <ul class="mobile-nav__list">
+      <li><a href="#about" class="mobile-nav__link">About</a></li>
+      <li><a href="#experience" class="mobile-nav__link">Experience</a></li>
+      <li><a href="#projects" class="mobile-nav__link">Projects</a></li>
+      <li><a href="#skills" class="mobile-nav__link">Skills</a></li>
+      <li><a href="#education" class="mobile-nav__link">Education</a></li>
+      <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav__social"></div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-name">Arunachalam Manikandan</h1>
-                    <h2 class="hero-title">CS Grad Student at University of Minnesota, Twin Cities | AI Engineer @ Supercell | GenAI Intern @ LyftBridge Innovation | Former SDE Intern @Visa Inc '23</h2>
-                    <div class="hero-buttons">
-                        <a href="https://drive.google.com/file/d/1-Y-s10joP_VP7pPKc03rrHRSdVWvOxyP/view?usp=sharing"
-                            class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
-                        <a href="https://www.linkedin.com/in/arunachalam-manikandan/"
-                            class="btn btn-outline linkedin-btn" target="_blank">
-                            <i class="fab fa-linkedin-in"></i> LinkedIn
-                        </a>
-                        <a href="https://github.com/ArunachalamM101202" class="btn btn-outline github-btn"
-                            target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-
-
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="photo_1.jpeg" alt="Arunachalam Manikandan" class="profile-img">
-                </div>
-            </div>
+    <section class="hero" id="hero">
+      <!-- Animated Background Orbs -->
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+      </div>
+      
+      <div class="hero__content">
+        <div class="hero__text">
+          <p class="hero__greeting">👋 Hello, World!</p>
+          <h1 class="hero__name">Hi, I'm <span class="gradient-text">Arun</span></h1>
+          <p class="hero__title">CS Grad Student & AI Engineer</p>
+          <p class="hero__description">
+            I design and deploy scalable LLM architectures, RAG pipelines, and agentic frameworks that make cutting-edge AI usable, responsive, and production-ready.
+          </p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Get In Touch</a>
+            <a href="#projects" class="btn btn--secondary">View Projects</a>
+          </div>
+          <div class="hero__social"></div>
         </div>
+        
+        <div class="hero__visual">
+          <div class="hero__image-glow"></div>
+          <div class="hero__image-wrapper">
+            <div class="hero__image-ring"></div>
+            <img src="photo_1.jpeg" alt="Arunachalam Manikandan" class="hero__image" loading="eager">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-mouse"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- Terminal Section -->
+    <section class="terminal-section section" id="terminal-section">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-label">Interactive</span>
+          <h2 class="section-title">Terminal</h2>
+          <p class="section-description">Explore my portfolio through an interactive terminal. Type 'help' to see available commands.</p>
+        </div>
+        
+        <div class="terminal" id="terminal" data-animate="scale-up">
+          <div class="terminal__header">
+            <div class="terminal__buttons">
+              <button class="terminal__btn terminal__btn--close" aria-label="Close"></button>
+              <button class="terminal__btn terminal__btn--minimize" aria-label="Minimize"></button>
+              <button class="terminal__btn terminal__btn--maximize" aria-label="Maximize"></button>
+            </div>
+            <span class="terminal__title">arun@portfolio ~ zsh</span>
+          </div>
+          <div class="terminal__body">
+            <div class="terminal__output"></div>
+            <div class="terminal__input-line">
+              <span class="terminal__prompt">
+                <span class="terminal__prompt-user">arun</span><span class="terminal__prompt-separator">@</span><span class="terminal__prompt-path">portfolio</span><span class="terminal__prompt-symbol"> $ </span>
+              </span>
+              <input type="text" class="terminal__input" placeholder="Type a command..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-
-            <!-- 1-Line Summary -->
-            <p class="about-highlight">
-                " <strong>I design and deploy scalable LLM architectures, RAG pipelines, and agentic frameworks</strong>
-                that make cutting-edge AI <strong>usable, responsive, and production-ready</strong>.<br>
-                I also work across the stack — building <strong>robust APIs</strong>, <strong>backend systems</strong>,
-                and occasionally <strong>web or mobile interfaces</strong>, with a strong foundation in <strong>machine
-                    learning</strong> and real-world deployment."
-            </p>
-
-            <!-- Subsection: Education & Research -->
-            <h4 class="about-subheading">Education & Research</h4>
-            <p class="justify">
-                I'm a Computer Science graduate student at the <strong>University of Minnesota, Twin Cities</strong>,
-                focused on AI, Machine Learning, NLP, and Advanced Software Engineering.
-                I serve as a <strong>Graduate Research Assistant</strong> in the Epidemiology department, helping model
-                <strong>HPV-related cancer outcomes</strong>, and as a <strong>Teaching Assistant</strong> at the
-                <strong>Carlson School of Management</strong>, guiding students in Big Data technologies like Spark and
-                AWS.
-            </p>
-
-            <!-- Subsection: What I'm Building Now -->
-            <h4 class="about-subheading">What I'm Building Now</h4>
-            <p class="justify">
-                Currently, I'm working on multiple cutting-edge AI projects: at <strong>LyftBridge Innovation</strong>, I'm integrating <strong>ElevenLabs real-time conversational agents</strong> with <strong>Google Cloud Run APIs</strong> to automate Gmail, Docs, and Calendar workflows, achieving 70% reduced response latency. At <strong>SmartPAL AI</strong>, I'm architecting <strong>unified serverless systems</strong> with AWS Lambda and LangGraph to orchestrate 30+ ETL jobs, boosting execution speed by 50%.
-            </p>
-
-            <!-- Subsection: Previous Experience -->
-            <h4 class="about-subheading">Previous Experience</h4>
-            <p class="justify">
-                At the <strong>AI Innovation Lab @ Supercell</strong>, I architected a <strong>multi-agent framework with LLaMA 3 and Agentic RAG</strong>, delivering real-time reasoning with sub-100ms latency and orchestrating FAISS-based vector memory systems handling 1M+ embeddings. Previously at <strong>Visa Inc.</strong>, I developed <strong>large-scale Spark pipelines</strong> in Scala, validating 15M+ records daily to ensure data integrity. I completed my undergraduate studies at the <strong>College of Engineering, Guindy</strong>, diving into AI, OS, databases, and distributed systems.
-            </p>
-
-            <!-- Subsection: Beyond the Classroom -->
-            <h4 class="about-subheading">What else I do?</h4>
-            <p class="justify">
-                I thrive in fast-paced, creative environments and recently <strong>won the AI x Journalism Hackathon</strong> with <strong>MinneDigest</strong>, securing $10,000 in funding. I'm passionate about <strong>multimodal AI research</strong>, having achieved 85.7% accuracy in sarcasm detection using fine-tuned Qwen2.5-VL models. Outside of work, I explore <strong>vision-language models</strong>, <strong>agentic frameworks</strong>, and <strong>real-time AI systems</strong>.
-            </p>
+    <section class="about-section section" id="about">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-label">Introduction</span>
+          <h2 class="section-title">About Me</h2>
         </div>
-    </section>
-
-    <!-- Education Section -->
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline-container">
-
-                <!-- UMN -->
-                <div class="timeline-item timeline-left">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <img src="images/umn.png" alt="UMN Logo" class="timeline-img">
-                            <div class="timeline-text">
-                                <h3>University of Minnesota, Twin Cities</h3>
-                                <h4>Master of Science in Computer Science</h4>
-                            </div>
-                        </div>
-                        <span class="date">Aug. 2024 – May 2026</span>
-                        <div class="gpa-progress">
-                            <div class="gpa-info">
-                                <span class="gpa-label">GPA</span>
-                                <span class="gpa-score">4.0 / 4.0</span>
-                            </div>
-                            <div class="gpa-bar">
-                                <div class="gpa-fill" data-width="100%"></div> <!-- 100% for 4.0/4.0 -->
-                            </div>
-                        </div>
-
-                        <h5 class="subheading">Coursework</h5>
-                        <div class="skills-container">
-                            <div class="skill-tag">Natural Language Processing</div>
-                            <div class="skill-tag">Advanced Machine Learning</div>
-                            <div class="skill-tag">Introduction to LLM Systems</div>
-                            <div class="skill-tag">Artificial Intelligence I</div>
-                            <div class="skill-tag">Machine Learning Fundamentals</div>
-                            <div class="skill-tag">User Interface Design</div>
-                            <div class="skill-tag">CSCI Colloquium</div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CEG -->
-                <div class="timeline-item timeline-right">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <img src="images/ceg.webp" alt="CEG Logo" class="timeline-img">
-                            <div class="timeline-text">
-                                <h3>College of Engineering, Guindy</h3>
-                                <h4>Bachelor of Technology in Information Technology</h4>
-                            </div>
-                        </div>
-                        <span class="date">Aug. 2020 – May 2024</span>
-                        <div class="gpa-progress">
-                            <div class="gpa-info">
-                                <span class="gpa-label">GPA</span>
-                                <span class="gpa-score">9.37 / 10</span>
-                            </div>
-                            <div class="gpa-bar">
-                                <div class="gpa-fill" data-width="100%"></div> <!-- 100% for 4.0/4.0 -->
-                            </div>
-                        </div>
-
-                        <h5 class="subheading">Coursework</h5>
-                        <div class="skills-container">
-                            <div class="skill-tag">Unix Internals</div>
-                            <div class="skill-tag">Cloud Computing</div>
-                            <div class="skill-tag">Artificial Intelligence</div>
-                            <div class="skill-tag">Operating Systems</div>
-                            <div class="skill-tag">Microservices</div>
-                            <div class="skill-tag">Distributed Systems</div>
-                            <div class="skill-tag">Advanced Databases</div>
-                            <div class="skill-tag">Software Engineering</div>
-                            <div class="skill-tag">Digital Image Processing</div>
-
-                            <div class="skill-tag">Data Structures and Algorithms</div>
-                        </div>
-                    </div>
-                </div>
-
+        
+        <div class="about-content">
+          <div class="about-image" data-animate="fade-up">
+            <div class="about-image__wrapper glass-card glass-card--static">
+              <img src="photo_1.jpeg" alt="Arunachalam Manikandan" loading="lazy">
             </div>
+          </div>
+          <div class="about-text" data-animate="fade-up" data-delay="200">
+            <!-- Content will be populated by JavaScript -->
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline-container">
-
-                <!-- LyftBridge Innovation -->
-                <div class="timeline-item timeline-right">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <img src="https://static.wixstatic.com/media/dc5052_fb45050974974fb59f57267d775cb18e~mv2.png/v1/fill/w_261,h_61,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/GettyImages-1823979425_b.png" alt="LyftBridge Logo" class="timeline-img">
-                            <div>
-                                <h3>GenAI Intern</h3>
-                                <h4>LyftBridge Innovation</h4>
-                                <div class="role-meta">
-                                    <span>Minneapolis, Minnesota</span> • <span>Onsite</span>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="date">Jul. 2025 – Aug. 2025</span>
-                        <ul>
-                            <li>Integrated ElevenLabs real-time conversational agents with Google Cloud Run APIs (FastAPI + Zapier MCP) to automate Gmail, Docs, Sheets, and Calendar workflows, reducing response latency by 70% compared to the prior local deployment.</li>
-                            <li>Engineered Cloud Run webhook tools for knowledge retrieval, communication, and scheduling, cutting manual task and deployment time by 40% and enhancing system reliability.</li>
-                        </ul>
-
-                        <h5 class="subheading">Technologies Used</h5>
-                        <div class="skills-container">
-                            <div class="skill-tag">ElevenLabs</div>
-                            <div class="skill-tag">Google Cloud Run</div>
-                            <div class="skill-tag">FastAPI</div>
-                            <div class="skill-tag">Zapier MCP</div>
-                            <div class="skill-tag">Gmail API</div>
-                            <div class="skill-tag">Google Docs API</div>
-                            <div class="skill-tag">Google Sheets API</div>
-                            <div class="skill-tag">Google Calendar API</div>
-                            <div class="skill-tag">Webhook APIs</div>
-                            <div class="skill-tag">Conversational AI</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SmartPAL AI -->
-                <div class="timeline-item timeline-left">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <img src="https://www.smartpal.org/assets/images/logo/logo-with-text-horizontal.svg" alt="SmartPAL AI Logo" class="timeline-img">
-                            <div>
-                                <h3>AI Intern</h3>
-                                <h4>SmartPAL AI</h4>
-                                <div class="role-meta">
-                                    <span>Minneapolis, Minnesota</span> • <span>Onsite</span>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="date">Jun. 2025 – Aug. 2025</span>
-                        <ul>
-                            <li>Automated a unified serverless architecture with AWS Lambda, EC2, S3, DynamoDB, FastAPI, and LangGraph to orchestrate 30+ ETL jobs, centralizing configuration in serverless.yml and boosting execution speed by 50%.</li>
-                        </ul>
-
-                        <h5 class="subheading">Technologies Used</h5>
-                        <div class="skills-container">
-                            <div class="skill-tag">AWS Lambda</div>
-                            <div class="skill-tag">AWS EC2</div>
-                            <div class="skill-tag">AWS S3</div>
-                            <div class="skill-tag">AWS DynamoDB</div>
-                            <div class="skill-tag">FastAPI</div>
-                            <div class="skill-tag">LangGraph</div>
-                            <div class="skill-tag">Serverless Framework</div>
-                            <div class="skill-tag">ETL Pipelines</div>
-                            <div class="skill-tag">Serverless Architecture</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Supercell -->
-                <div class="timeline-item timeline-right">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <img src="images/supercell.webp" alt="Supercell Logo" class="timeline-img">
-                            <div>
-                                <h3>AI Engineer, AI Innovation Lab</h3>
-                                <h4>Supercell</h4>
-                                <div class="role-meta">
-                                    <span>San Francisco, California</span> • <span>Onsite</span>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="date">Apr. 2025 – Jun. 2025</span>
-                        <ul>
-                            <li>Architected a multi-agent framework with LLaMA 3 and Agentic RAG, integrating planning, personality, and emotion-belief systems to deliver real-time reasoning with <100 ms latency across local and cloud endpoints.</li>
-                            <li>Orchestrated a per-agent FAISS-based vector memory system handling 1M+ embeddings within the framework, enabling long-term recall, high-precision contextual retrieval, and cross-agent knowledge sharing.</li>
-                        </ul>
-
-                        <h5 class="subheading">Technologies Used</h5>
-                        <div class="skills-container">
-                            <div class="skill-tag">LLaMA 3</div>
-                            <div class="skill-tag">Agentic RAG</div>
-                            <div class="skill-tag">Multi-Agent Systems</div>
-                            <div class="skill-tag">FAISS</div>
-                            <div class="skill-tag">Vector Embeddings</div>
-                            <div class="skill-tag">Real-time AI</div>
-                            <div class="skill-tag">Cloud Endpoints</div>
-                            <div class="skill-tag">AI Planning Systems</div>
-                            <div class="skill-tag">Contextual Retrieval</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TA @ UMN -->
-                <div class="timeline-item timeline-left">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <img src="images/umn.png" alt="UMN Logo" class="timeline-img">
-                            <div>
-                                <h3>Graduate Teaching Assistant</h3>
-                                <h4>University of Minnesota, Twin Cities</h4>
-                                <div class="role-meta">
-                                    <span>Minneapolis, Minnesota</span> • <span>Onsite</span>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="date">Jan. 2025 – Present</span>
-                        <ul>
-                            <li>Assisted in teaching <em>MSBA 6331 – Big Data Analytics</em> at the Carlson School of
-                                Management, focusing on Hadoop, Hive, Spark, AWS, and scalable data pipeline design.
-                            </li>
-                            <li>Designed and graded assignments, homeworks, and lab tasks to reinforce student
-                                understanding of distributed systems, data engineering, and MLOps tools like SageMaker.
-                            </li>
-                            <li>Proctored exams and provided individualized support to students, bridging conceptual
-                                learning with hands-on implementation in cloud-based big data environments.</li>
-                        </ul>
-
-                        <h5 class="subheading">Technologies Used</h5>
-                        <div class="skills-container">
-                            <div class="skill-tag">Hadoop</div>
-                            <div class="skill-tag">Hive</div>
-                            <div class="skill-tag">Spark</div>
-                            <div class="skill-tag">AWS</div>
-                            <div class="skill-tag">MLOps</div>
-                            <div class="skill-tag">Machine Learning</div>
-                            <div class="skill-tag">SQL</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RA @ UMN -->
-                <div class="timeline-item timeline-right">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <img src="images/umn.png" alt="UMN Logo" class="timeline-img">
-                            <div>
-                                <h3>Graduate Research Assistant</h3>
-                                <h4>University of Minnesota, Twin Cities</h4>
-                                <div class="role-meta">
-                                    <span>Minneapolis, Minnesota</span> • <span>Onsite</span>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="date">Sep. 2024 – Present</span>
-                        <ul>
-                            <li>Developed and maintained Java-based simulation models for dual-stain cancer screening,
-                                driving research on early detection strategies and patient outcome optimization.</li>
-                            <li>Designed and executed comprehensive simulation tests across large datasets to validate
-                                screening model accuracy, adaptability, and reliability.</li>
-                            <li>Built robust JUnit-based testing frameworks and working on CI/CD pipelines to support
-                                scalable, testable cancer epidemiology simulations.</li>
-                        </ul>
-
-                        <h5 class="subheading">Technologies Used</h5>
-                        <div class="skills-container">
-                            <div class="skill-tag">Java</div>
-                            <div class="skill-tag">JUnit</div>
-                            <div class="skill-tag">Object-Oriented Programming</div>
-                            <div class="skill-tag">Simulation Modeling</div>
-                            <div class="skill-tag">Test-Driven Development (TDD)</div>
-                            <div class="skill-tag">Git</div>
-                            <div class="skill-tag">Linux</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Visa Intern -->
-                <div class="timeline-item timeline-left">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <img src="images/visa.jpg" alt="UMN Logo" class="timeline-img">
-                            <div>
-                                <h3>Software Development Engineering Intern</h3>
-                                <h4>Visa Inc.</h4>
-                                <div class="role-meta">
-                                    <span>Bangalore, Karnataka</span> • <span>Onsite</span>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="date">Jun. 2023 – Aug. 2023</span>
-                        <ul>
-                            <li>Built a high-performance Spark application in Scala to perform daily validations on over
-                                15 million records, identifying critical data discrepancies across multiple large-scale
-                                tables.</li>
-                            <li>Improved enterprise data integrity by engineering custom validation logic and automating
-                                quality checks, significantly reducing data anomalies within Visa's infrastructure.</li>
-                            <li>Applied Big Data engineering principles in a production environment, gaining hands-on
-                                experience with Spark, Scala, and Hadoop to design scalable, fault-tolerant pipelines.
-                            </li>
-                        </ul>
-
-                        <h5 class="subheading">Technologies Used</h5>
-                        <div class="skills-container">
-                            <div class="skill-tag">Apache Spark</div>
-                            <div class="skill-tag">Scala</div>
-                            <div class="skill-tag">Big Data</div>
-                            <div class="skill-tag">Hadoop</div>
-                            <div class="skill-tag">Hive</div>
-                            <div class="skill-tag">ETL Pipelines</div>
-                            <div class="skill-tag">Data Validation</div>
-                            <div class="skill-tag">Data Integrity</div>
-                            <div class="skill-tag">Batch Processing</div>
-                            <div class="skill-tag">Agile Development</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Movate -->
-                <div class="timeline-item timeline-right">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <img src="images/movate.jpeg" alt="UMN Logo" class="timeline-img">
-                            <div>
-                                <h3>Intern</h3>
-                                <h4>Movate (CSS Corp)</h4>
-                                <div class="role-meta">
-                                    <span>Chennai, Tamil Nadu</span> • <span>Remote</span>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="date">Jul. 2022 – Aug. 2022</span>
-                        <ul>
-                            <li>Designed and deployed an AI-powered chatbot to streamline the U.S. visa application
-                                process, enabling users to schedule interviews, understand eligibility steps, and
-                                receive instant answers to visa-related queries.</li>
-                            <li>Implemented natural language understanding using Microsoft LUIS and integrated
-                                conversational flows with Microsoft Azure, QnA Maker, and a custom knowledge base to
-                                enhance response accuracy and user engagement.</li>
-                            <li>Gained hands-on experience in conversational AI development using enterprise-grade
-                                tools, improving accessibility and efficiency for users navigating complex bureaucratic
-                                processes.</li>
-                        </ul>
-
-                        <h5 class="subheading">Technologies Used</h5>
-                        <div class="skills-container">
-                            <div class="skill-tag">Microsoft Azure</div>
-                            <div class="skill-tag">LUIS (Language Understanding)</div>
-                            <div class="skill-tag">QnA Maker</div>
-                            <div class="skill-tag">Conversational AI</div>
-                            <div class="skill-tag">Chatbot Design</div>
-                            <div class="skill-tag">Natural Language Processing</div>
-                            <div class="skill-tag">Knowledge Base</div>
-                            <div class="skill-tag">Dialog Flow Design</div>
-                            <div class="skill-tag">Azure Bot Services</div>
-                            <div class="skill-tag">User Experience (UX)</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <section class="experience-section section" id="experience">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-label">Career</span>
+          <h2 class="section-title">Experience</h2>
+          <p class="section-description">My professional journey in AI, software engineering, and research.</p>
         </div>
+        
+        <div class="experience-grid">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-container">
-
-                <!-- Multimodal Sarcasm Detection Project -->
-                <div class="project-card flip-card">
-                    <div class="flip-card-inner">
-
-                        <!-- Front Face -->
-                        <div class="flip-card-front">
-                            <div class="project-content">
-
-                                <!-- Badge -->
-                                <span class="project-badge">🤖 Vision-Language Model</span>
-
-                                <!-- Title -->
-                                <h3 class="project-title">Multimodal Sarcasm Detection using Vision-Language Models</h3>
-
-                                <!-- Subheading -->
-                                <p class="project-subheading">
-                                    Fine-tuned Qwen2.5-VL for multimodal sarcasm detection, achieving 85.7% accuracy with significant performance improvements.
-                                </p>
-
-                                <!-- Stack Tags -->
-                                <h5 class="subheading">Technologies Used</h5>
-                                <div class="project-stack">
-                                    <div class="stack-item">Qwen2.5-VL</div>
-                                    <div class="stack-item">BLIP</div>
-                                    <div class="stack-item">Hugging Face</div>
-                                    <div class="stack-item">LoRA</div>
-                                    <div class="stack-item">Unsloth</div>
-                                    <div class="stack-item">Streamlit</div>
-                                    <div class="stack-item">Gemini</div>
-                                </div>
-
-                                <!-- Links -->
-                                <div class="project-links">
-                                    <a href="#" class="project-btn github-btn">
-                                        <i class="fab fa-github"></i> GitHub
-                                    </a>
-                                    <a href="#" class="project-btn youtube-btn">
-                                        <i class="fab fa-youtube"></i> Demo
-                                    </a>
-                                </div>
-
-                                <!-- Flip Icon for Mobile -->
-                                <div class="flip-toggle-icon"
-                                    onclick="this.closest('.flip-card').classList.toggle('flipped')">
-                                    <i class="fas fa-sync-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Back Face -->
-                        <div class="flip-card-back">
-                            <div class="project-content">
-                                <ul>
-                                    <li>Optimized and fine-tuned <strong>Qwen2.5-VL (3B/7B)</strong> on a custom multimodal sarcasm dataset using <strong>LoRA via Unsloth</strong>, applying <strong>4-bit quantization</strong> to cut inference latency from 10 to 1 minute.</li>
-
-                                    <li>Achieved <strong>85.7% accuracy</strong> with a <strong>+6.5% F1 score gain</strong> over Gemini 2.0, demonstrating superior performance in multimodal sarcasm understanding.</li>
-
-                                    <li>Implemented efficient model optimization techniques including <strong>quantization</strong> and <strong>parameter-efficient fine-tuning</strong> for deployment-ready vision-language models.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- MinneDigest Project -->
-                <div class="project-card flip-card">
-                    <div class="flip-card-inner">
-
-                        <!-- Front Face -->
-                        <div class="flip-card-front">
-                            <div class="project-content">
-
-                                <!-- Badge -->
-                                <span class="project-badge">🏆 Hackathon Winner</span>
-
-                                <!-- Title -->
-                                <h3 class="project-title">MinneDigest: AI-Powered News Platform</h3>
-
-                                <!-- Subheading -->
-                                <p class="project-subheading">
-                                    AI-powered news platform that generates multilingual summaries and human-like podcasts, winning $10,000 in funding.
-                                </p>
-
-                                <!-- Stack Tags -->
-                                <h5 class="subheading">Technologies Used</h5>
-                                <div class="project-stack">
-                                    <div class="stack-item">FastAPI</div>
-                                    <div class="stack-item">Streamlit</div>
-                                    <div class="stack-item">ChatGPT</div>
-                                    <div class="stack-item">LLaMA 3</div>
-                                    <div class="stack-item">Ollama</div>
-                                    <div class="stack-item">ElevenLabs</div>
-                                    <div class="stack-item">MongoDB</div>
-                                    <div class="stack-item">NLTK</div>
-                                    <div class="stack-item">Whisper</div>
-                                </div>
-
-                                <!-- Links -->
-                                <div class="project-links">
-                                    <a href="https://cse.umn.edu/cs/news/cse-team-triumphs-hackathon"
-                                        class="project-btn github-btn">
-                                        <i class="fa-solid fa-newspaper"></i>News
-                                    </a>
-                                    <a href="https://www.youtube.com/watch?v=XzmNL9hF_1s"
-                                        class="project-btn youtube-btn"><i class="fab fa-youtube"></i> Demo</a>
-                                </div>
-
-                                <!-- Flip Icon for Mobile -->
-                                <div class="flip-toggle-icon"
-                                    onclick="this.closest('.flip-card').classList.toggle('flipped')">
-                                    <i class="fas fa-sync-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Back Face -->
-                        <div class="flip-card-back">
-                            <div class="project-content">
-                                <ul>
-                                    <li>Integrated an <strong>AI-powered news platform</strong> that generates multilingual summaries and human-like podcasts, winning the <strong>AI x Journalism Hackathon</strong> and securing <strong>$10,000 in funding</strong> for product scaling.</li>
-
-                                    <li>Developed a <strong>scalable backend</strong> with FastAPI, ChatGPT, and LLaMA 3 (via Ollama) to automate summarization, podcast generation, and translation, cutting <strong>content creation time by 85%</strong>.</li>
-
-                                    <li>Enabled <strong>white-labeled deployment</strong> for local news outlets with multilingual support, real-time processing, and automated content generation pipelines.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="project-card flip-card">
-                    <div class="flip-card-inner">
-
-                        <!-- Front Face -->
-                        <div class="flip-card-front">
-                            <div class="project-content">
-
-                                <!-- Label -->
-                                <span class="project-badge">📚 IEEE Published | Research Project</span>
-
-                                <!-- Title -->
-                                <h3 class="project-title">Streamlining Architectural Workflows Using Generative AI</h3>
-
-                                <!-- One-liner -->
-                                <p class="project-subheading">
-                                    End-to-end AI system generating 2D floorplans and photorealistic interior designs from natural language prompts.
-                                </p>
-
-                                <!-- Tech Stack -->
-                                <h5 class="subheading">Technologies Used</h5>
-                                <div class="project-stack">
-                                    <span class="stack-item">PyTorch</span>
-                                    <span class="stack-item">TensorFlow</span>
-                                    <span class="stack-item">Transformers</span>
-                                    <span class="stack-item">Hugging Face</span>
-                                    <span class="stack-item">ChatGPT</span>
-                                    <span class="stack-item">LLaMA3</span>
-                                    <span class="stack-item">CycleGAN</span>
-                                    <span class="stack-item">GNN</span>
-                                </div>
-
-                                <!-- Buttons -->
-                                <div class="project-links">
-                                    <!-- Paper button with same style as GitHub -->
-                                    <a href="https://ieeexplore.ieee.org/document/10782715"
-                                        class="project-btn github-btn">
-                                        <i class="fas fa-file-pdf"></i> Paper
-                                    </a>
-
-                                    <!-- Demo button with original YouTube icon -->
-                                    <a href="https://www.youtube.com/watch?v=oYGnE332zBI"
-                                        class="project-btn youtube-btn">
-                                        <i class="fab fa-youtube"></i> Demo
-                                    </a>
-                                </div>
-
-                                <!-- Flip Icon for Mobile -->
-                                <div class="flip-toggle-icon"
-                                    onclick="this.closest('.flip-card').classList.toggle('flipped')">
-                                    <i class="fas fa-sync-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Back Face -->
-                        <div class="flip-card-back">
-                            <div class="project-content">
-                                <ul>
-                                    <li>Implemented an <strong>end-to-end AI system</strong> to generate 2D floorplans and photorealistic interior designs from natural language prompts using a hybrid <strong>NER-GNN-MLP model</strong>, Neural Style Transfer, and CycleGANs, cutting <strong>manual design time by 40%</strong>.</li>
-
-                                    <li>Ensured compliance with <strong>TNCDBR 2019 housing regulations</strong> and <strong>Vastu principles</strong> while maintaining high-quality architectural output through automated validation systems.</li>
-
-                                    <li>Evaluated architectural layout generation performance across multiple LLMs (<strong>ChatGPT-3.5, LLaMA3, and Mistral</strong>) and published results in <strong>IEEE CVMI 2024</strong>, demonstrating a <strong>70% improvement</strong> in spatial layout efficiency and design iteration speed.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="project-card flip-card">
-                    <div class="flip-card-inner">
-
-                        <!-- Front Face -->
-                        <div class="flip-card-front">
-                            <div class="project-content">
-
-                                <!-- Label -->
-                                <span class="project-badge">🏆 Hackathon Top 5</span>
-
-                                <!-- Title -->
-                                <h3 class="project-title">HealthWagon: Emergency Medical Response Platform</h3>
-
-                                <!-- Subheading -->
-                                <p class="project-subheading">
-                                    AI-driven medical assistance built with real-time fall detection algorithm and
-                                    secured EHR access within 24
-                                    hours.
-                                </p>
-
-                                <!-- Stack -->
-                                <h5 class="subheading">Technologies Used</h5>
-                                <div class="project-stack">
-                                    <span class="stack-item">React Native</span>
-                                    <span class="stack-item">Flask</span>
-                                    <span class="stack-item">MongoDB</span>
-                                    <span class="stack-item">REST API</span>
-                                    <span class="stack-item">AES Encryption</span>
-                                    <span class="stack-item">QR Code</span>
-                                    <!-- <span class="stack-item">Named Entity Recognition</span> -->
-                                    <span class="stack-item">spaCy</span>
-                                </div>
-
-                                <!-- Buttons -->
-                                <div class="project-links">
-                                    <a href="https://github.com/Team-AllStars/HealthWagon"
-                                        class="project-btn github-btn">
-                                        <i class="fab fa-github"></i> GitHub
-                                    </a>
-                                    <a href="https://www.youtube.com/watch?v=pXllO6j6cqk"
-                                        class="project-btn youtube-btn">
-                                        <i class="fab fa-youtube"></i> Demo
-                                    </a>
-                                </div>
-
-                                <!-- Flip icon -->
-                                <div class="flip-toggle-icon"
-                                    onclick="this.closest('.flip-card').classList.toggle('flipped')">
-                                    <i class="fas fa-sync-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Back Face -->
-                        <div class="flip-card-back">
-                            <div class="project-content">
-                                <ul>
-                                    <li>Developed a <strong>fall detection app</strong> with a custom algorithm that
-                                        auto-alerts <strong>hospitals</strong> and <strong>emergency contacts</strong>,
-                                        reducing response time in critical situations.</li>
-
-                                    <li>Built a <strong>QR-enabled ambulance app</strong> to access patient
-                                        <strong>health records</strong> and sync data with hospitals for faster,
-                                        informed response.
-                                    </li>
-
-                                    <li>Implemented a <strong>secure EHR system</strong> with <strong>role-based
-                                            access</strong>, <strong>AES encryption</strong>, and a <strong>custom AI
-                                            chatbot with NER</strong> to simplify doctor reports for users.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
+    <section class="projects-section section" id="projects">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-label">Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-description">Innovative solutions I've built in AI, machine learning, and full-stack development.</p>
         </div>
+        
+        <div class="projects-grid">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            
-            <!-- Languages -->
-            <h4 class="about-subheading">Languages</h4>
-            <div class="skills-container">
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">C++</div>
-                <div class="skill-tag">Java</div>
-                <div class="skill-tag">Scala</div>
-                <div class="skill-tag">C#</div>
-                <div class="skill-tag">JavaScript</div>
-                <div class="skill-tag">SQL</div>
-                <div class="skill-tag">HTML/CSS</div>
-            </div>
-
-            <!-- AI & Machine Learning -->
-            <h4 class="about-subheading">AI & Machine Learning</h4>
-            <div class="skills-container">
-                <div class="skill-tag">Large Language Models (LLMs)</div>
-                <div class="skill-tag">Retrieval-Augmented Generation (RAG)</div>
-                <div class="skill-tag">Vision-Language Models (VLMs)</div>
-                <div class="skill-tag">Deep Learning</div>
-                <div class="skill-tag">Transformers</div>
-                <div class="skill-tag">Prompt Engineering</div>
-                <div class="skill-tag">Fine-tuning</div>
-                <div class="skill-tag">Low-Rank Adaptation (LoRA)</div>
-                <div class="skill-tag">Quantization</div>
-                <div class="skill-tag">MLOps</div>
-            </div>
-
-            <!-- Frameworks/Libraries -->
-            <h4 class="about-subheading">Frameworks/Libraries</h4>
-            <div class="skills-container">
-                <div class="skill-tag">PyTorch</div>
-                <div class="skill-tag">TensorFlow</div>
-                <div class="skill-tag">Hugging Face Transformers</div>
-                <div class="skill-tag">LangChain</div>
-                <div class="skill-tag">LangGraph</div>
-                <div class="skill-tag">Unsloth</div>
-                <div class="skill-tag">OpenCV</div>
-                <div class="skill-tag">NLTK</div>
-                <div class="skill-tag">spaCy</div>
-                <div class="skill-tag">FAISS</div>
-                <div class="skill-tag">Pinecone</div>
-                <div class="skill-tag">Streamlit</div>
-                <div class="skill-tag">React</div>
-                <div class="skill-tag">React Native</div>
-                <div class="skill-tag">Express.js</div>
-                <div class="skill-tag">Flask</div>
-                <div class="skill-tag">FastAPI</div>
-                <div class="skill-tag">Ollama</div>
-                <div class="skill-tag">MCP</div>
-            </div>
-
-            <!-- Cloud, Backend & Data Infrastructure -->
-            <h4 class="about-subheading">Cloud, Backend & Data Infrastructure</h4>
-            <div class="skills-container">
-                <div class="skill-tag">REST APIs</div>
-                <div class="skill-tag">Microservices</div>
-                <div class="skill-tag">Docker</div>
-                <div class="skill-tag">CI/CD pipelines</div>
-                <div class="skill-tag">Git</div>
-                <div class="skill-tag">GitHub</div>
-                <div class="skill-tag">Postman</div>
-                <div class="skill-tag">MongoDB</div>
-                <div class="skill-tag">PostgreSQL</div>
-                <div class="skill-tag">MySQL</div>
-                <div class="skill-tag">Redis</div>
-                <div class="skill-tag">Apache Spark</div>
-                <div class="skill-tag">Hadoop</div>
-                <div class="skill-tag">Hive</div>
-                <div class="skill-tag">AWS Lambda</div>
-                <div class="skill-tag">AWS DynamoDB</div>
-                <div class="skill-tag">AWS EC2</div>
-                <div class="skill-tag">AWS S3</div>
-                <div class="skill-tag">AWS IAM</div>
-                <div class="skill-tag">AWS SageMaker</div>
-                <div class="skill-tag">AWS VPC</div>
-                <div class="skill-tag">Google Cloud Run</div>
-                <div class="skill-tag">Google Cloud Build</div>
-                <div class="skill-tag">Google APIs</div>
-                <div class="skill-tag">Google Compute Engine</div>
-                <div class="skill-tag">Google Cloud Storage</div>
-            </div>
+    <section class="skills-section section" id="skills">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-label">Expertise</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-description">Technologies and tools I work with to build innovative solutions.</p>
         </div>
+        
+        <div class="skills-grid">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="social-links">
-                    <a href="https://github.com/ArunachalamM101202" class="social-link" target="_blank"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/arunachalam-manikandan/" class="social-link" target="_blank"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:arunachalam101202@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
-                </div>
-                <p class="copyright">© 2025 Arunachalam Manikandan. All rights reserved.</p>
-            </div>
+    <!-- Education Section -->
+    <section class="education-section section" id="education">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-label">Academic</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-description">My academic background and continuous learning journey.</p>
         </div>
-    </footer>
+        
+        <div class="education-grid">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Contact Section -->
+    <section class="contact-section section" id="contact">
+      <div class="container">
+        <div class="contact-content" data-animate="fade-up">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-description">
+            I'm always open to discussing new opportunities, collaborations, or just having a chat about AI and technology. Feel free to reach out!
+          </p>
+          
+          <div class="contact-methods">
+            <!-- Content will be populated by JavaScript -->
+          </div>
+          
+          <a href="#" class="btn btn--primary resume-btn" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path fill-rule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm5.845 17.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V12a.75.75 0 00-1.5 0v4.19l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z" clip-rule="evenodd"/>
+              <path d="M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z"/>
+            </svg>
+            Download Resume
+          </a>
+          
+          <div class="contact-social mt-8">
+            <!-- Content will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Buy Me a Coffee Button -->
+  </main>
 
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="#" class="footer__logo">AM</a>
+        
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="#about" class="footer__link">About</a>
+          <a href="#experience" class="footer__link">Experience</a>
+          <a href="#projects" class="footer__link">Projects</a>
+          <a href="#contact" class="footer__link">Contact</a>
+        </nav>
+        
+        <div class="footer__social">
+          <!-- Social links will be dynamically added -->
+        </div>
+        
+        <p class="footer__copyright">
+          © 2024 <a href="#">Arunachalam Manikandan</a>. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script type="module" src="js/main.js"></script>
 </body>
-
 </html>

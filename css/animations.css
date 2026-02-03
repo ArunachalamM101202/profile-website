@@ -1,0 +1,337 @@
+/* === Animations & Scroll Effects === */
+
+/* === Scroll Reveal Animations === */
+
+/* Base state - elements start invisible */
+[data-animate] {
+  opacity: 0;
+  transition: opacity var(--duration-slow) var(--ease-out),
+              transform var(--duration-slow) var(--ease-out);
+}
+
+/* Fade up animation */
+[data-animate="fade-up"] {
+  transform: translateY(40px);
+}
+
+[data-animate="fade-up"].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade in animation */
+[data-animate="fade-in"] {
+  opacity: 0;
+}
+
+[data-animate="fade-in"].is-visible {
+  opacity: 1;
+}
+
+/* Scale up animation */
+[data-animate="scale-up"] {
+  transform: scale(0.9);
+}
+
+[data-animate="scale-up"].is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide in from left */
+[data-animate="slide-left"] {
+  transform: translateX(-40px);
+}
+
+[data-animate="slide-left"].is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide in from right */
+[data-animate="slide-right"] {
+  transform: translateX(40px);
+}
+
+[data-animate="slide-right"].is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Blur in animation */
+[data-animate="blur-in"] {
+  filter: blur(10px);
+}
+
+[data-animate="blur-in"].is-visible {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* === Staggered Children Animation === */
+[data-animate-stagger] > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--duration-normal) var(--ease-out),
+              transform var(--duration-normal) var(--ease-out);
+}
+
+[data-animate-stagger].is-visible > *:nth-child(1) { transition-delay: 0ms; }
+[data-animate-stagger].is-visible > *:nth-child(2) { transition-delay: 100ms; }
+[data-animate-stagger].is-visible > *:nth-child(3) { transition-delay: 200ms; }
+[data-animate-stagger].is-visible > *:nth-child(4) { transition-delay: 300ms; }
+[data-animate-stagger].is-visible > *:nth-child(5) { transition-delay: 400ms; }
+[data-animate-stagger].is-visible > *:nth-child(6) { transition-delay: 500ms; }
+[data-animate-stagger].is-visible > *:nth-child(7) { transition-delay: 600ms; }
+[data-animate-stagger].is-visible > *:nth-child(8) { transition-delay: 700ms; }
+[data-animate-stagger].is-visible > *:nth-child(9) { transition-delay: 800ms; }
+[data-animate-stagger].is-visible > *:nth-child(10) { transition-delay: 900ms; }
+
+[data-animate-stagger].is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation delay utilities */
+[data-delay="100"] { transition-delay: 100ms !important; }
+[data-delay="200"] { transition-delay: 200ms !important; }
+[data-delay="300"] { transition-delay: 300ms !important; }
+[data-delay="400"] { transition-delay: 400ms !important; }
+[data-delay="500"] { transition-delay: 500ms !important; }
+
+/* === Hover Animations === */
+
+/* Lift on hover */
+.hover-lift {
+  transition: transform var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Glow on hover */
+.hover-glow {
+  transition: box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.hover-glow:hover {
+  box-shadow: var(--shadow-glow);
+}
+
+/* Scale on hover */
+.hover-scale {
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Gradient shift on hover */
+.hover-gradient {
+  position: relative;
+  background-size: 200% auto;
+  transition: background-position var(--duration-normal) var(--ease-out);
+}
+
+.hover-gradient:hover {
+  background-position: right center;
+}
+
+/* Border glow on hover */
+.hover-border-glow {
+  position: relative;
+}
+
+.hover-border-glow::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: var(--gradient-primary);
+  border-radius: inherit;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity var(--duration-normal) var(--ease-out);
+  filter: blur(8px);
+}
+
+.hover-border-glow:hover::after {
+  opacity: 0.5;
+}
+
+/* === Continuous Animations === */
+
+/* Pulse animation */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Bounce animation */
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* Spin animation */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Ping animation */
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Float animation */
+.animate-float {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Gradient animation */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Shimmer animation for loading */
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--bg-glass) 0%,
+    var(--bg-tertiary) 50%,
+    var(--bg-glass) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Text reveal animation */
+.animate-text-reveal {
+  overflow: hidden;
+}
+
+.animate-text-reveal span {
+  display: inline-block;
+  transform: translateY(100%);
+  animation: textReveal 0.6s var(--ease-out) forwards;
+}
+
+@keyframes textReveal {
+  to { transform: translateY(0); }
+}
+
+/* === Page Transitions === */
+
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all var(--duration-slow) var(--ease-out);
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+/* === Cursor Effects === */
+.custom-cursor {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor--visible {
+  opacity: 1;
+}
+
+.custom-cursor--hover {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  
+  [data-animate-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

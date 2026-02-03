@@ -1,0 +1,341 @@
+{
+  "personal_info": {
+    "name": "Arunachalam Manikandan",
+    "title": "CS Grad Student at University of Minnesota, Twin Cities | AI Engineer @ Supercell | GenAI Intern @ LyftBridge Innovation | Former SDE Intern @Visa Inc '23",
+    "contact": {
+      "phone": "(763) 327-4643",
+      "email": "amanikan063@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/arunachalam-manikandan",
+      "github": "https://github.com/arunachalam-manikandan",
+      "github_alt": "https://github.com/ArunachalamM101202",
+      "portfolio": "https://portfolio-link"
+    },
+    "resume_link": "https://drive.google.com/file/d/1-Y-s10joP_VP7pPKc03rrHRSdVWvOxyP/view?usp=sharing",
+    "profile_image": "photo_1.jpeg"
+  },
+  "about": {
+    "summary": "I design and deploy scalable LLM architectures, RAG pipelines, and agentic frameworks that make cutting-edge AI usable, responsive, and production-ready. I also work across the stack — building robust APIs, backend systems, and occasionally web or mobile interfaces, with a strong foundation in machine learning and real-world deployment.",
+    "education_research": "I'm a Computer Science graduate student at the University of Minnesota, Twin Cities, focused on AI, Machine Learning, NLP, and Advanced Software Engineering. I serve as a Graduate Research Assistant in the Epidemiology department, helping model HPV-related cancer outcomes, and as a Teaching Assistant at the Carlson School of Management, guiding students in Big Data technologies like Spark and AWS.",
+    "current_work": "Currently, I'm working on multiple cutting-edge AI projects: at LyftBridge Innovation, I'm integrating ElevenLabs real-time conversational agents with Google Cloud Run APIs to automate Gmail, Docs, and Calendar workflows, achieving 70% reduced response latency. At SmartPAL AI, I'm architecting unified serverless systems with AWS Lambda and LangGraph to orchestrate 30+ ETL jobs, boosting execution speed by 50%.",
+    "previous_experience": "At the AI Innovation Lab @ Supercell, I architected a multi-agent framework with LLaMA 3 and Agentic RAG, delivering real-time reasoning with sub-100ms latency and orchestrating FAISS-based vector memory systems handling 1M+ embeddings. Previously at Visa Inc., I developed large-scale Spark pipelines in Scala, validating 15M+ records daily to ensure data integrity. I completed my undergraduate studies at the College of Engineering, Guindy, diving into AI, OS, databases, and distributed systems.",
+    "beyond_classroom": "I thrive in fast-paced, creative environments and recently won the AI x Journalism Hackathon with MinneDigest, securing $10,000 in funding. I'm passionate about multimodal AI research, having achieved 85.7% accuracy in sarcasm detection using fine-tuned Qwen2.5-VL models. Outside of work, I explore vision-language models, agentic frameworks, and real-time AI systems."
+  },
+  "education": [
+    {
+      "institution": "University of Minnesota, Twin Cities",
+      "location": "Minneapolis, MN",
+      "degree": "Master of Science in Computer Science",
+      "duration": "Aug. 2024 – May. 2026",
+      "gpa": "4.00/4.00",
+      "logo": "images/umn.png",
+      "coursework": [
+        "Natural Language Processing",
+        "Advanced Machine Learning",
+        "Introduction to LLM Systems",
+        "Artificial Intelligence I",
+        "Machine Learning Fundamentals",
+        "User Interface Design",
+        "CSCI Colloquium"
+      ]
+    },
+    {
+      "institution": "College of Engineering Guindy, Anna University",
+      "location": "Chennai, India",
+      "degree": "Bachelor of Technology in Information Technology",
+      "duration": "Aug. 2020 – May. 2024",
+      "gpa": "9.37/10.00",
+      "logo": "images/ceg.webp",
+      "coursework": [
+        "Unix Internals",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Operating Systems",
+        "Microservices",
+        "Distributed Systems",
+        "Advanced Databases",
+        "Software Engineering",
+        "Digital Image Processing",
+        "Data Structures and Algorithms"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "LyftBridge Innovation",
+      "position": "GenAI Intern",
+      "location": "Minneapolis, MN",
+      "duration": "Jul. 2025 – Aug. 2025",
+      "logo": "https://static.wixstatic.com/media/dc5052_fb45050974974fb59f57267d775cb18e~mv2.png/v1/fill/w_261,h_61,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/GettyImages-1823979425_b.png",
+      "responsibilities": [
+        "Integrated ElevenLabs real-time conversational agents with Google Cloud Run APIs (FastAPI + Zapier MCP) to automate Gmail, Docs, Sheets, and Calendar workflows, reducing response latency by 70% compared to the prior local deployment.",
+        "Engineered Cloud Run webhook tools for knowledge retrieval, communication, and scheduling, cutting manual task and deployment time by 40% and enhancing system reliability."
+      ],
+      "technologies": [
+        "ElevenLabs",
+        "Google Cloud Run",
+        "FastAPI",
+        "Zapier MCP",
+        "Gmail API",
+        "Google Docs API",
+        "Google Sheets API",
+        "Google Calendar API",
+        "Webhook APIs",
+        "Conversational AI"
+      ]
+    },
+    {
+      "company": "SmartPAL AI",
+      "position": "AI Intern",
+      "location": "Minneapolis, MN",
+      "duration": "Jun. 2025 – Aug. 2025",
+      "logo": "https://www.smartpal.org/assets/images/logo/logo-with-text-horizontal.svg",
+      "responsibilities": [
+        "Automated a unified serverless architecture with AWS Lambda, EC2, S3, DynamoDB, FastAPI, and LangGraph to orchestrate 30+ ETL jobs, centralizing configuration in serverless.yml and boosting execution speed by 50%."
+      ],
+      "technologies": [
+        "AWS Lambda",
+        "AWS EC2",
+        "AWS S3",
+        "AWS DynamoDB",
+        "FastAPI",
+        "LangGraph",
+        "Serverless Framework",
+        "ETL Pipelines",
+        "Serverless Architecture"
+      ]
+    },
+    {
+      "company": "Supercell",
+      "position": "AI Engineer, AI Innovation Lab",
+      "location": "San Francisco, CA",
+      "duration": "Apr. 2025 – Jun. 2025",
+      "logo": "images/supercell.webp",
+      "responsibilities": [
+        "Architected a multi-agent framework with LLaMA 3 and Agentic RAG, integrating planning, personality, and emotion-belief systems to deliver real-time reasoning with <100 ms latency across local and cloud endpoints.",
+        "Orchestrated a per-agent FAISS-based vector memory system handling 1M+ embeddings within the framework, enabling long-term recall, high-precision contextual retrieval, and cross-agent knowledge sharing."
+      ],
+      "technologies": [
+        "LLaMA 3",
+        "Agentic RAG",
+        "Multi-Agent Systems",
+        "FAISS",
+        "Vector Embeddings",
+        "Real-time AI",
+        "Cloud Endpoints",
+        "AI Planning Systems",
+        "Contextual Retrieval"
+      ]
+    },
+    {
+      "company": "University of Minnesota, Twin Cities",
+      "position": "Graduate Teaching Assistant",
+      "location": "Minneapolis, MN",
+      "duration": "Jan. 2025 – Present",
+      "logo": "images/umn.png",
+      "responsibilities": [
+        "Assisted in teaching MSBA 6331 – Big Data Analytics at the Carlson School of Management, guiding students through hands-on labs and assignments using Hadoop, Hive, Spark, and AWS.",
+        "Designed and graded assignments, homeworks, and lab tasks to reinforce student understanding of scalable data processing and machine learning pipelines.",
+        "Proctored exams and provided individualized support to students, bridging conceptual learning with practical implementation of Big Data technologies."
+      ],
+      "technologies": [
+        "Hadoop",
+        "Hive",
+        "Spark",
+        "AWS",
+        "MLOps",
+        "Machine Learning",
+        "SQL"
+      ]
+    },
+    {
+      "company": "University of Minnesota, Twin Cities",
+      "position": "Graduate Research Assistant",
+      "location": "Minneapolis, MN",
+      "duration": "Sep. 2024 – Present",
+      "logo": "images/umn.png",
+      "responsibilities": [
+        "Developed and maintained Java-based simulation models for dual-stain cancer screening, driving research on early detection strategies and patient outcome optimization.",
+        "Designed and executed comprehensive simulation tests across large datasets to validate screening model accuracy, adaptability, and reliability.",
+        "Built robust JUnit-based testing frameworks and working on CI/CD pipelines to support continuous integration and reproducible research workflows."
+      ],
+      "technologies": [
+        "Java",
+        "JUnit",
+        "Object-Oriented Programming",
+        "Simulation Modeling",
+        "Test-Driven Development (TDD)",
+        "Git",
+        "Linux"
+      ]
+    },
+    {
+      "company": "Visa",
+      "position": "Software Development Engineering Intern",
+      "location": "Bangalore, India",
+      "duration": "Jun. 2023 – Aug. 2023",
+      "logo": "images/visa.jpg",
+      "responsibilities": [
+        "Built a scalable, distributed ETL pipeline using Spark and Scala to process 15M+ financial records daily, performing batch validation, cross-table reconciliation, and real-time anomaly detection across Visa's data infrastructure.",
+        "Designed automated data quality monitoring and reporting workflows with custom error-handling logic, reducing data integrity issues by 50% and improving reliability of downstream analytics for compliance and business intelligence teams."
+      ],
+      "technologies": [
+        "Apache Spark",
+        "Scala",
+        "Big Data",
+        "Hadoop",
+        "Hive",
+        "ETL Pipelines",
+        "Data Validation",
+        "Data Integrity",
+        "Batch Processing",
+        "Agile Development"
+      ]
+    },
+    {
+      "company": "Movate",
+      "position": "Summer Intern",
+      "location": "Remote",
+      "duration": "Jul. 2022 – Aug. 2022",
+      "logo": "images/movate.jpeg",
+      "responsibilities": [
+        "Designed and deployed an AI-powered chatbot to streamline the U.S. visa application process, enabling applicants to receive instant answers to visa-related queries.",
+        "Implemented natural language understanding using Microsoft LUIS and integrated QnA Maker for dynamic knowledge retrieval to enhance response accuracy and user engagement.",
+        "Gained hands-on experience in conversational AI development using enterprise-grade cloud services, dialog flow design, and user-centric chatbot architecture."
+      ],
+      "technologies": [
+        "Microsoft Azure",
+        "LUIS (Language Understanding)",
+        "QnA Maker",
+        "Conversational AI",
+        "Chatbot Design",
+        "Natural Language Processing",
+        "Knowledge Base",
+        "Dialog Flow Design",
+        "Azure Bot Services",
+        "User Experience (UX)"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Multimodal Sarcasm Detection using Vision-Language Models",
+      "technologies": [
+        "Qwen2.5-VL",
+        "BLIP",
+        "Hugging Face",
+        "LoRA",
+        "Streamlit",
+        "Gemini"
+      ],
+      "description": [
+        "Optimized and fine-tuned Qwen2.5-VL (3B/7B) on a custom multimodal sarcasm dataset using LoRA via Unsloth, applying 4-bit quantization to cut inference latency from 10 to 1 min and achieving 85.7% accuracy with a +6.5% F1 score gain over Gemini 2.0."
+      ]
+    },
+    {
+      "name": "MinneDigest",
+      "technologies": [
+        "FastAPI",
+        "Streamlit",
+        "ChatGPT",
+        "LLaMA 3",
+        "Ollama",
+        "ElevenLabs",
+        "MongoDB",
+        "NLTK",
+        "Whisper"
+      ],
+      "description": [
+        "Integrated an AI-powered news platform that generates multilingual summaries and human-like podcasts, winning the AI x Journalism Hackathon and securing $10,000 in funding for product scaling.",
+        "Developed a scalable backend with FastAPI, ChatGPT, and LLaMA 3 (via Ollama) to automate summarization, podcast generation, and translation, cutting content creation time by 85% and enabling white-labeled deployment for local news outlets."
+      ],
+      "achievement": "Won AI x Journalism Hackathon - $10,000 in funding"
+    },
+    {
+      "name": "Streamlining Architectural Workflows Using Generative AI",
+      "technologies": [
+        "PyTorch",
+        "TensorFlow",
+        "Transformers",
+        "Hugging Face",
+        "ChatGPT",
+        "LLaMA3"
+      ],
+      "description": [
+        "Implemented an end-to-end AI system to generate 2D floorplans and photorealistic interior designs from natural language prompts using a hybrid NER-GNN-MLP model, Neural Style Transfer, and CycleGANs, cutting manual design time by 40% while ensuring compliance with TNCDBR 2019 housing regulations and Vastu principles.",
+        "Evaluated architectural layout generation performance across multiple LLMs, ChatGPT-3.5, LLaMA3 and Mistral and published results in IEEE CVMI 2024, demonstrating a 70% improvement in spatial layout efficiency and design iteration speed."
+      ],
+      "publication": "Published in IEEE CVMI 2024"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "Python",
+      "C++",
+      "Java",
+      "Scala",
+      "C#",
+      "JavaScript",
+      "SQL",
+      "HTML/CSS",
+      "TypeScript"
+    ],
+    "ai_ml": [
+      "Large Language Models (LLMs)",
+      "Retrieval-Augmented Generation (RAG)",
+      "Vision-Language Models (VLMs)",
+      "Deep Learning",
+      "Transformers",
+      "Generative AI",
+      "Fine-tuning",
+      "Low-Rank Adaptation (LoRA)",
+      "Quantization",
+      "MLOps",
+      "Foundational Model Tuning"
+    ],
+    "frameworks_libraries": [
+      "PyTorch",
+      "TensorFlow",
+      "Hugging Face Transformers",
+      "LangChain",
+      "LangGraph",
+      "Unsloth",
+      "OpenCV",
+      "NLTK",
+      "spaCy",
+      "FAISS",
+      "Pinecone",
+      "Streamlit",
+      "React",
+      "React Native",
+      "Express.js",
+      "Flask",
+      "FastAPI",
+      "Ollama",
+      "MCP",
+      "scikit-learn",
+      "Node.js",
+      "ASP.NET Core"
+    ],
+    "cloud_backend_data": [
+      "REST APIs",
+      "Microservices",
+      "Docker",
+      "CI/CD pipelines",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "Postman",
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "Redis",
+      "Apache Spark",
+      "Hadoop",
+      "Hive",
+      "AWS (Lambda, DynamoDB, EC2, S3, IAM, SageMaker, VPC)",
+      "Google Cloud GCP (Cloud Run, Cloud Build, APIs, Compute Engine, Cloud Storage)",
+      "Kubernetes",
+      "Agent Design"
+    ]
+  }
+}
