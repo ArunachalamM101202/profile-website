@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "ai-toolkit-hackathon-workflows",
+    "title": "How I Built My Own AI Toolkit to Win a Hackathon and the Workflows That Made It Possible",
+    "date": "2026-04-20",
+    "description": "Three open-source tools and one core workflow — karpathy-skills, UI2MD, tinyfish-skills, and the LLM wiki — that powered a Vanta Security Prize win at the O1 Summit Hackathon."
+  },
+  {
+    "slug": "sirius-health-ai-on-device",
+    "title": "What If Your Health AI Literally Couldn't Sell Your Data? We Built One to Find Out",
+    "date": "2026-04-20",
+    "description": "How we built Sirius in 24 hours — a privacy-first health AI running Gemma E2B entirely on-device with on-device voice, camera OCR, and peer-to-peer sync between iPhone and Mac."
+  },
+  {
+    "slug": "project-paradox",
+    "title": "I Was Building a Mafia Game. I Accidentally Built an AI Framework.",
+    "date": "2026-03-27",
+    "description": "A deep dive into the memory architecture, prompt engineering, and accidental framework that came out of 10 weeks at Supercell's AI Innovation Lab in Helsinki."
+  },
+  {
+    "slug": "f1-visa-experience",
+    "title": "US Student Visa (F1 Visa) Application, Biometric, and Interview Experience 2024–2025",
+    "date": "2024-06-15",
+    "description": "A step-by-step walkthrough of the entire F1 Student Visa process — DS-160, SEVIS fee, slot booking, biometric, and consular interview — based on a Chennai experience in June 2024."
+  }
+]
