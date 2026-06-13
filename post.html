@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post · Your Name</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-name">Arunachalam Manikandan</a>
+      <ul class="nav-links">
+        <li><a href="blog.html">Blog</a></li>
+        <li><button class="theme-toggle" id="theme-btn" aria-label="Toggle theme">○ Light</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div id="post-content" class="section">
+        <p class="loading">Loading…</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>Built with Claude Sonnet 4.6</span>
+      <a href="blog.html">← All posts</a>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
+  <!-- marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    async function loadPost() {
+      const container = document.getElementById('post-content');
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get('slug');
+
+      if (!slug) {
+        container.innerHTML = '<p class="error-msg">No post specified. <a href="blog.html">← Back to blog</a></p>';
+        return;
+      }
+
+      try {
+        // Load manifest to get post metadata
+        const manifestRes = await fetch('posts/manifest.json');
+        if (!manifestRes.ok) throw new Error('Could not load post index.');
+        const manifest = await manifestRes.json();
+        const meta = manifest.find(p => p.slug === slug);
+
+        // Load the markdown file
+        const mdRes = await fetch(`posts/${slug}.md`);
+        if (!mdRes.ok) throw new Error('Post not found.');
+        const markdown = await mdRes.text();
+
+        // Update page title
+        if (meta) document.title = `${meta.title} · Arunachalam Manikandan`;
+
+        // Render
+        const html = marked.parse(markdown);
+        container.innerHTML = `
+          <a href="blog.html" class="back-link">← All posts</a>
+          ${meta ? `
+            <div class="post-meta">
+              <span>${formatDate(meta.date)}</span>
+            </div>
+          ` : ''}
+          <div class="prose">${html}</div>
+          <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+            <a href="blog.html" class="back-link">← Back to all posts</a>
+          </div>
+        `;
+      } catch (err) {
+        container.innerHTML = `
+          <p class="error-msg">${err.message}</p>
+          <p><a href="blog.html">← Back to blog</a></p>
+        `;
+      }
+    }
+
+    function formatDate(dateStr) {
+      return new Date(dateStr).toLocaleDateString('en-US', {
+        year: 'numeric', month: 'long', day: 'numeric'
+      });
+    }
+
+    loadPost();
+
+    const btn = document.getElementById('theme-btn');
+    function applyTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem('theme', t);
+      btn.textContent = t === 'dark' ? '○ Light' : '● Dark';
+    }
+    applyTheme(localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    btn.addEventListener('click', () => {
+      applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+
+</body>
+</html>

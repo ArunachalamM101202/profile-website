@@ -1,0 +1,219 @@
+{
+  "name": "Arunachalam Manikandan",
+  "tagline": "MS CS @ University of Minnesota · Prev. Supercell, Visa Inc.",
+  "location": "Minneapolis, MN",
+  "bio": "I'm a Computer Science graduate student at the University of Minnesota focused on LLMs, deep learning, vision-language models, RAG, and agentic AI systems. I enjoy building end-to-end systems that move from research ideas to real products. Currently, I work as a Graduate Research Assistant developing deep learning pipelines for biomedical image segmentation — applying large vision models like SAM and ViT to whole-slide histology images on HPC clusters. Previously, I co-developed Project Paradox at Supercell's AI Innovation Lab in Helsinki — a multi-agent framework where agents maintain beliefs, emotions, memory, and dynamic planning. I'm a frequent hackathon participant and co-creator of MinneDigest, an AI-powered newsroom that won the AI + Local News Hackathon and a $10,000 grant.",
+  "links": {
+    "linkedin": "https://linkedin.com/in/arunachalam-manikandan",
+    "github": "https://github.com/ArunachalamM101202",
+    "email": "amanikan063@gmail.com"
+  },
+  "experience": [
+    {
+      "company": "University of Minnesota",
+      "role": "Graduate Research Assistant — Medical Imaging & Informatics",
+      "location": "Minneapolis, MN",
+      "start": "Aug 2025",
+      "end": "May 2026",
+      "bullets": [
+        "Engineered an end-to-end deep-learning pipeline to detect and segment adipocytes in gigapixel H&E whole-slide images, diagnosing a fundamental failure mode where SOTA nucleus-segmentation vision transformers (CellViT++ / CellViT-SAM-H, HoVer-Net) detected 0 of ~9,000 adipocytes per slide.",
+        "Designed a parameter-efficient self-attention adapter for CellViT-SAM-H — freezing the 637M-parameter SAM-H encoder and training only a 7.9M-param zero-init gated attention module — enabling adipocyte detection without full-model retraining and reaching 0.48 F1.",
+        "Fine-tuned the HV-map decoder of the SAM-based segmentation transformer (15M of 700M params trainable) on custom ground-truth maps derived from spatial-transcriptomics centroids, reducing HV regression loss and improving detection.",
+        "Operationalized all training and inference on NVIDIA A100 GPUs via SLURM (mixed-precision, gradient accumulation), surfacing results through a FastAPI + React analytics dashboard."
+      ]
+    },
+    {
+      "company": "SmartPAL AI",
+      "role": "Intern",
+      "location": "Minneapolis, MN",
+      "start": "Jun 2025",
+      "end": "Jan 2026",
+      "bullets": [
+        "Prototyped an in-platform AI assignment copilot (GitHub Copilot-style) powered by a RAG pipeline delivering stepwise hints, code assistance, and rapid in-context feedback — increasing student engagement and reducing context-switching.",
+        "Automated a unified serverless data platform orchestrating 30+ modular ETL jobs, centralizing configuration in serverless.yml and Lambda layers to cut pipeline execution time by 50%.",
+        "Built a fully configurable ETL job scheduler and validation framework on DynamoDB- and Lambda-backed metadata, supporting dynamic cron scheduling, real-time job toggling, and batch testing via a web control plane."
+      ]
+    },
+    {
+      "company": "Supercell",
+      "role": "AI Engineer — AI Innovation Lab",
+      "location": "Helsinki, Finland",
+      "start": "Apr 2025",
+      "end": "Jun 2025",
+      "bullets": [
+        "Selected as one of 16 innovators worldwide for Supercell's pilot AI Innovation Lab in Helsinki.",
+        "Co-developed Project Paradox — a Multi-Agent LLM framework for intelligent, emotionally-driven game agents with memory, beliefs, personality, and autonomous planning. Accepted at WiML @ ICML 2026.",
+        "Presented to Supercell CEO Ilkka Paananen and a panel of game industry founders including co-founders of Crunchyroll and Kabam."
+      ]
+    },
+    {
+      "company": "Lyftbridge",
+      "role": "AI Intern",
+      "location": "Minneapolis, MN",
+      "start": "Aug 2025",
+      "end": "Sep 2025",
+      "bullets": [
+        "Built a production-grade ElevenLabs voice agent on Google Cloud Run (FastAPI + Zapier MCP) autonomously orchestrating Google Workspace workflows, reducing end-to-end latency by 70%.",
+        "Designed Cloud Run-native tools for retrieval, communication, and scheduling, reducing manual workflows and deployment effort by 40%."
+      ]
+    },
+    {
+      "company": "University of Minnesota — School of Public Health",
+      "role": "Graduate Research Assistant",
+      "location": "Minneapolis, MN",
+      "start": "Sep 2024",
+      "end": "Aug 2025",
+      "bullets": [
+        "Developed Java-based simulation models for dual-stain cancer screening, driving research on early detection and patient outcome optimization.",
+        "Built an interactive Streamlit dashboard analyzing 15 HPV screening strategies across 100+ age-stratified cohorts, processing 1.5M+ simulated patient-years."
+      ]
+    },
+    {
+      "company": "University of Minnesota — Carlson School of Management",
+      "role": "Graduate Teaching Assistant — Big Data Analytics (MSBA 6331)",
+      "location": "Minneapolis, MN",
+      "start": "Jan 2025",
+      "end": "May 2025",
+      "bullets": [
+        "Assisted in teaching Big Data Analytics covering Hadoop, Hive, Spark, AWS, and scalable data pipeline design.",
+        "Designed and graded assignments and lab tasks; provided individualized support bridging conceptual learning with hands-on cloud implementation."
+      ]
+    },
+    {
+      "company": "Visa Inc.",
+      "role": "Software Development Engineer Intern",
+      "location": "Bengaluru, India",
+      "start": "Jun 2023",
+      "end": "Aug 2023",
+      "bullets": [
+        "Built a high-performance Spark/Scala application performing daily validations on 15M+ records, identifying critical data discrepancies across large-scale financial tables.",
+        "Improved enterprise data integrity by engineering custom validation logic and automating quality checks within Visa's infrastructure."
+      ]
+    },
+    {
+      "company": "CSS Corp (Movate)",
+      "role": "Intern",
+      "location": "Chennai, India",
+      "start": "Jul 2022",
+      "end": "Aug 2022",
+      "bullets": [
+        "Designed and deployed an AI-powered chatbot to streamline the U.S. visa application process using Microsoft LUIS, Azure, and QnA Maker.",
+        "Implemented NLU-based conversational flows with a custom knowledge base to enhance response accuracy and user engagement."
+      ]
+    },
+    {
+      "company": "ACM Student Chapter of CEG",
+      "role": "Chairperson",
+      "location": "Chennai, India",
+      "start": "Jun 2023",
+      "end": "May 2024",
+      "bullets": [
+        "Led a team of 40 in organizing 25+ events; ran C.O.D.E, a placement training program with 330+ participants, officially approved by the Centre for University-Industry Collaboration.",
+        "Organized CodHer'24, a 24-hour women-only hackathon with 330+ participants and a Rs 40,000 prize pool."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project Paradox",
+      "date": "Apr – Jun 2025",
+      "description": "A Multi-Agent LLM framework for intelligent, emotionally-driven game agents. Built at Supercell's AI Innovation Lab. Features RAG-based memory, emotion-belief-personality modeling, and a Dynamic Story Trigger System. Accepted at WiML @ ICML 2026.",
+      "link": null
+    },
+    {
+      "name": "MinneDigest",
+      "date": "Feb 2025",
+      "description": "AI-powered news-to-audio platform built in under 8 hours at a hackathon. Delivers real-time, multilingual news digests and AI-generated podcasts. Won a $10,000 grant from Hacks/Hackers and the University of Minnesota.",
+      "link": null
+    },
+    {
+      "name": "Sirius — On-Device Health AI",
+      "date": "Apr 2026",
+      "description": "Privacy-first health AI built in 24 hours at the O1 Summit Hackathon. Runs Gemma E2B entirely on-device with on-device voice, camera OCR, and peer-to-peer sync between iPhone and Mac. Zero data leaves the device.",
+      "link": null
+    },
+    {
+      "name": "Multimodal Sarcasm Detection via Vision-Language Models",
+      "date": "Feb – May 2025",
+      "description": "Fine-tuned Qwen2.5-VL-7B with a novel reasoning-augmented corpus, achieving 85.7% accuracy and 0.81 F1 on the MMSD dataset — outperforming Gemini 2.0 Flash on explainability. Reduced inference time from ~10 min to under 2 min via 4-bit NF4 quantization.",
+      "link": null
+    },
+    {
+      "name": "ARCHITECT — Generative AI for Architectural Design",
+      "date": "Oct 2023 – Apr 2024",
+      "description": "B.Tech thesis. AI-driven house layout generation (GCN + MLP), interior remodeling visualization (Neural Style Transfer), facade generation (CycleGANs), and 3D floorplan vectorization. Validated by the HoD of the School of Architecture and Planning.",
+      "link": null
+    }
+  ],
+  "skills": [
+    "Python", "Swift", "Java", "Scala", "TypeScript",
+    "PyTorch", "Hugging Face", "LLM Fine-tuning", "RAG", "Vision-Language Models",
+    "On-Device ML", "Multimodal AI", "Agentic AI", "SAM / ViT",
+    "AWS Lambda", "Google Cloud Run", "Serverless", "FastAPI",
+    "Apache Spark", "Hadoop", "Docker", "SLURM / HPC",
+    "Multi-Agent Systems", "NLP", "Computer Vision", "CI/CD"
+  ],
+  "education": [
+    {
+      "school": "University of Minnesota, Twin Cities",
+      "degree": "M.S. Computer Science",
+      "gpa": "4.0 / 4.0",
+      "start": "Aug 2024",
+      "end": "May 2026",
+      "location": "Minneapolis, MN",
+      "notes": "Coursework: AI, Machine Learning, NLP, LLMs, Advanced ML, UI Design, Interactive Web"
+    },
+    {
+      "school": "College of Engineering, Guindy (Anna University)",
+      "degree": "B.Tech Information Technology",
+      "gpa": "9.37 / 10",
+      "start": "Aug 2020",
+      "end": "May 2024",
+      "location": "Chennai, India",
+      "notes": "Chairperson, ACM Student Chapter of CEG"
+    }
+  ],
+  "awards": [
+    {
+      "title": "AI × Journalism Hackathon Winner",
+      "issuer": "Hacks/Hackers",
+      "date": "Feb 2025",
+      "description": "Won $10,000 grant for MinneDigest — an AI-powered news digest and podcast platform."
+    },
+    {
+      "title": "Vanta Security Prize — O1 Summit Hackathon",
+      "issuer": "O1 Summit",
+      "date": "Apr 2026",
+      "description": "Won the Vanta Security Prize for Sirius, a privacy-first on-device health AI."
+    },
+    {
+      "title": "ITrix 2023 Hackathon Winner",
+      "issuer": "Department of IST, CEG",
+      "date": "May 2023",
+      "description": "First prize for Linguica, an adaptive AI learning platform built in 8 hours."
+    },
+    {
+      "title": "NSF National I-Corps Program",
+      "issuer": "National Science Foundation",
+      "date": "Nov 2025",
+      "description": "Selected for the NSF I-Corps entrepreneurship training program."
+    }
+  ],
+  "publications": [
+    {
+      "title": "Streamlining Architectural Workflows Using Generative Adversarial Networks",
+      "venue": "IEEE",
+      "link": "https://ieeexplore.ieee.org/document/10782715"
+    },
+    {
+      "title": "House Layout Generation Using Transformer",
+      "venue": "SSRN",
+      "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4913949"
+    },
+    {
+      "title": "Remote Health Monitoring for Empowering Patients with Intelligent Wearables",
+      "venue": "Springer",
+      "link": "https://link.springer.com/chapter/10.1007/978-981-96-4679-1_9"
+    }
+  ]
+}

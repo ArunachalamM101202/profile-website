@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog · Arunachalam Manikandan</title>
+  <meta name="description" content="Writing on software, systems, and ideas." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-name">Arunachalam Manikandan</a>
+      <ul class="nav-links">
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><button class="theme-toggle" id="theme-btn" aria-label="Toggle theme">○ Light</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="section">
+        <h1>Blog</h1>
+        <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: 0.95rem;">
+          Things I built, figured out, or couldn't stop thinking about.
+        </p>
+      </div>
+
+      <div class="section">
+        <ul class="post-list" id="post-list">
+          <li class="loading">Loading posts…</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>Built with Claude Sonnet 4.6</span>
+      <a href="/">← Back to profile</a>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
+  <script>
+    async function loadPosts() {
+      const list = document.getElementById('post-list');
+
+      try {
+        const res = await fetch('posts/manifest.json');
+        if (!res.ok) throw new Error('Could not load posts.');
+        const posts = await res.json();
+
+        if (posts.length === 0) {
+          list.innerHTML = '<li class="loading">No posts yet.</li>';
+          return;
+        }
+
+        list.innerHTML = posts
+          .sort((a, b) => new Date(b.date) - new Date(a.date))
+          .map(post => `
+            <li class="post-item">
+              <a href="post.html?slug=${encodeURIComponent(post.slug)}">
+                <p class="post-date">${formatDate(post.date)}</p>
+                <p class="post-title">${escapeHtml(post.title)}</p>
+                ${post.description ? `<p class="post-desc">${escapeHtml(post.description)}</p>` : ''}
+              </a>
+            </li>
+          `).join('');
+      } catch (err) {
+        list.innerHTML = `<li class="error-msg">Failed to load posts: ${err.message}</li>`;
+      }
+    }
+
+    function formatDate(dateStr) {
+      return new Date(dateStr).toLocaleDateString('en-US', {
+        year: 'numeric', month: 'long', day: 'numeric'
+      });
+    }
+
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    loadPosts();
+
+    const btn = document.getElementById('theme-btn');
+    function applyTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem('theme', t);
+      btn.textContent = t === 'dark' ? '○ Light' : '● Dark';
+    }
+    applyTheme(localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    btn.addEventListener('click', () => {
+      applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+
+</body>
+</html>
