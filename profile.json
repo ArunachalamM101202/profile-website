@@ -23,6 +23,17 @@
       ]
     },
     {
+      "company": "Lyftbridge",
+      "role": "AI Intern",
+      "location": "Minneapolis, MN",
+      "start": "Aug 2025",
+      "end": "Sep 2025",
+      "bullets": [
+        "Built a production-grade ElevenLabs voice agent on Google Cloud Run (FastAPI + Zapier MCP) autonomously orchestrating Google Workspace workflows, reducing end-to-end latency by 70%.",
+        "Designed Cloud Run-native tools for retrieval, communication, and scheduling, reducing manual workflows and deployment effort by 40%."
+      ]
+    },
+    {
       "company": "SmartPAL AI",
       "role": "Intern",
       "location": "Minneapolis, MN",
@@ -47,14 +58,14 @@
       ]
     },
     {
-      "company": "Lyftbridge",
-      "role": "AI Intern",
+      "company": "University of Minnesota — Carlson School of Management",
+      "role": "Graduate Teaching Assistant — Big Data Analytics (MSBA 6331)",
       "location": "Minneapolis, MN",
-      "start": "Aug 2025",
-      "end": "Sep 2025",
+      "start": "Jan 2025",
+      "end": "May 2025",
       "bullets": [
-        "Built a production-grade ElevenLabs voice agent on Google Cloud Run (FastAPI + Zapier MCP) autonomously orchestrating Google Workspace workflows, reducing end-to-end latency by 70%.",
-        "Designed Cloud Run-native tools for retrieval, communication, and scheduling, reducing manual workflows and deployment effort by 40%."
+        "Assisted in teaching Big Data Analytics covering Hadoop, Hive, Spark, AWS, and scalable data pipeline design.",
+        "Designed and graded assignments and lab tasks; provided individualized support bridging conceptual learning with hands-on cloud implementation."
       ]
     },
     {
@@ -69,14 +80,14 @@
       ]
     },
     {
-      "company": "University of Minnesota — Carlson School of Management",
-      "role": "Graduate Teaching Assistant — Big Data Analytics (MSBA 6331)",
-      "location": "Minneapolis, MN",
-      "start": "Jan 2025",
-      "end": "May 2025",
+      "company": "ACM Student Chapter of CEG",
+      "role": "Chairperson",
+      "location": "Chennai, India",
+      "start": "Jun 2023",
+      "end": "May 2024",
       "bullets": [
-        "Assisted in teaching Big Data Analytics covering Hadoop, Hive, Spark, AWS, and scalable data pipeline design.",
-        "Designed and graded assignments and lab tasks; provided individualized support bridging conceptual learning with hands-on cloud implementation."
+        "Led a team of 40 in organizing 25+ events; ran C.O.D.E, a placement training program with 330+ participants, officially approved by the Centre for University-Industry Collaboration.",
+        "Organized CodHer'24, a 24-hour women-only hackathon with 330+ participants and a Rs 40,000 prize pool."
       ]
     },
     {
@@ -100,32 +111,9 @@
         "Designed and deployed an AI-powered chatbot to streamline the U.S. visa application process using Microsoft LUIS, Azure, and QnA Maker.",
         "Implemented NLU-based conversational flows with a custom knowledge base to enhance response accuracy and user engagement."
       ]
-    },
-    {
-      "company": "ACM Student Chapter of CEG",
-      "role": "Chairperson",
-      "location": "Chennai, India",
-      "start": "Jun 2023",
-      "end": "May 2024",
-      "bullets": [
-        "Led a team of 40 in organizing 25+ events; ran C.O.D.E, a placement training program with 330+ participants, officially approved by the Centre for University-Industry Collaboration.",
-        "Organized CodHer'24, a 24-hour women-only hackathon with 330+ participants and a Rs 40,000 prize pool."
-      ]
     }
   ],
   "projects": [
-    {
-      "name": "Project Paradox",
-      "date": "Apr – Jun 2025",
-      "description": "A Multi-Agent LLM framework for intelligent, emotionally-driven game agents. Built at Supercell's AI Innovation Lab. Features RAG-based memory, emotion-belief-personality modeling, and a Dynamic Story Trigger System. Accepted at WiML @ ICML 2026.",
-      "link": null
-    },
-    {
-      "name": "MinneDigest",
-      "date": "Feb 2025",
-      "description": "AI-powered news-to-audio platform built in under 8 hours at a hackathon. Delivers real-time, multilingual news digests and AI-generated podcasts. Won a $10,000 grant from Hacks/Hackers and the University of Minnesota.",
-      "link": null
-    },
     {
       "name": "Sirius — On-Device Health AI",
       "date": "Apr 2026",
@@ -133,9 +121,21 @@
       "link": null
     },
     {
+      "name": "Project Paradox",
+      "date": "Apr – Jun 2025",
+      "description": "A Multi-Agent LLM framework for intelligent, emotionally-driven game agents. Built at Supercell's AI Innovation Lab. Features RAG-based memory, emotion-belief-personality modeling, and a Dynamic Story Trigger System. Accepted at WiML @ ICML 2026.",
+      "link": null
+    },
+    {
       "name": "Multimodal Sarcasm Detection via Vision-Language Models",
       "date": "Feb – May 2025",
       "description": "Fine-tuned Qwen2.5-VL-7B with a novel reasoning-augmented corpus, achieving 85.7% accuracy and 0.81 F1 on the MMSD dataset — outperforming Gemini 2.0 Flash on explainability. Reduced inference time from ~10 min to under 2 min via 4-bit NF4 quantization.",
+      "link": null
+    },
+    {
+      "name": "MinneDigest",
+      "date": "Feb 2025",
+      "description": "AI-powered news-to-audio platform built in under 8 hours at a hackathon. Delivers real-time, multilingual news digests and AI-generated podcasts. Won a $10,000 grant from Hacks/Hackers and the University of Minnesota.",
       "link": null
     },
     {
@@ -175,28 +175,28 @@
   ],
   "awards": [
     {
-      "title": "AI × Journalism Hackathon Winner",
-      "issuer": "Hacks/Hackers",
-      "date": "Feb 2025",
-      "description": "Won $10,000 grant for MinneDigest — an AI-powered news digest and podcast platform."
-    },
-    {
       "title": "Vanta Security Prize — O1 Summit Hackathon",
       "issuer": "O1 Summit",
       "date": "Apr 2026",
       "description": "Won the Vanta Security Prize for Sirius, a privacy-first on-device health AI."
     },
     {
-      "title": "ITrix 2023 Hackathon Winner",
-      "issuer": "Department of IST, CEG",
-      "date": "May 2023",
-      "description": "First prize for Linguica, an adaptive AI learning platform built in 8 hours."
-    },
-    {
       "title": "NSF National I-Corps Program",
       "issuer": "National Science Foundation",
       "date": "Nov 2025",
       "description": "Selected for the NSF I-Corps entrepreneurship training program."
+    },
+    {
+      "title": "AI × Journalism Hackathon Winner",
+      "issuer": "Hacks/Hackers",
+      "date": "Feb 2025",
+      "description": "Won $10,000 grant for MinneDigest — an AI-powered news digest and podcast platform."
+    },
+    {
+      "title": "ITrix 2023 Hackathon Winner",
+      "issuer": "Department of IST, CEG",
+      "date": "May 2023",
+      "description": "First prize for Linguica, an adaptive AI learning platform built in 8 hours."
     }
   ],
   "publications": [
