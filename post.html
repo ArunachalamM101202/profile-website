@@ -73,11 +73,6 @@
         const html = marked.parse(markdown);
         container.innerHTML = `
           <a href="blog.html" class="back-link">← All posts</a>
-          ${meta ? `
-            <div class="post-meta">
-              <span>${formatDate(meta.date)}</span>
-            </div>
-          ` : ''}
           <div class="prose">${html}</div>
           <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
             <a href="blog.html" class="back-link">← Back to all posts</a>
@@ -89,12 +84,6 @@
           <p><a href="blog.html">← Back to blog</a></p>
         `;
       }
-    }
-
-    function formatDate(dateStr) {
-      return new Date(dateStr).toLocaleDateString('en-US', {
-        year: 'numeric', month: 'long', day: 'numeric'
-      });
     }
 
     loadPost();
