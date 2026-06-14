@@ -307,7 +307,7 @@ footer .container {
 .post-item:first-child { border-top: 1px solid var(--border); }
 
 .post-item a { text-decoration: none; display: block; }
-.post-item a:hover .post-title { text-decoration: underline; color: var(--accent); }
+.post-item a:hover .post-title { color: var(--accent); }
 
 .post-title {
   font-size: 1.1rem;
